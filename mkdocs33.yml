@@ -1,0 +1,33 @@
+# 站点基本信息
+site_name: XX产品手册
+# site_url: https://你的域名/  # 最终部署的网址
+site_description: XX产品使用指南与技术文档
+
+# 导航栏（对应docs/下的文档，自动生成菜单）
+nav:
+  - 首页: index.md
+  - 快速入门:
+    - 安装指南: install.md
+    - 登录流程: login.md
+  - 功能说明: features.md
+  - 常见问题: faq.md
+
+# 主题（用Material主题，美观且支持暗黑模式）
+theme:
+  name: material
+  language: zh  # 中文
+  palette:
+    primary: green  # 主色调
+    accent: lightblue  # 强调色
+  features:
+    - navigation.tabs  # 顶部标签导航
+    - navigation.sections  # 导航分组
+    - search.suggest  # 搜索建议
+    - search.highlight  # 搜索高亮
+
+# 插件（可选，增强功能）
+plugins:
+  - search:  # 内置搜索（无需额外安装）
+      lang: zh
+#  - mkdocs-versioning:  # 版本控制（需先装：pip install mkdocs-versioning）
+#      default_version: latest

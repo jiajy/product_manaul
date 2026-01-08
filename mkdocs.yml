@@ -1,0 +1,23 @@
+site_name: 你的文档名称
+
+# 主题配置（核心）
+theme:
+  name: material
+  features:
+    - toc.integrate  # 强制右侧显示目录
+    - toc.follow     # 目录跟随滚动
+    - navigation.sections  # 左侧导航按一级标题分组
+
+# Markdown扩展（控制标题层级）
+markdown_extensions:
+  - toc:
+      toc_depth: 6  # 支持到6级标题
+      permalink: true  # 标题后显示锚点（便于调试）
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+# 左侧导航（对应一/二级标题）
+nav:
+  - 首页: index.md
+  - EC300用户手册:  # 一级标题（左侧导航）
+      - EC300手册V1.3.1: EC300/zh/EC300用户手册_V1.3.1_Udesk.md  # 二级标题（左侧导航子项）
