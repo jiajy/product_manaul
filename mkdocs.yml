@@ -1,5 +1,8 @@
-site_name: 你的文档名称
-
+# 新增/修改以下配置
+site_name: EC300用户手册
+site_url: https://jiajy.github.io/product_manaul/  # 最终访问地址
+repo_url: https://github.com/jiajy/product_manaul  # 你的GitHub仓库地址
+repo_name: jiajy/product_manaul
 # 主题配置（核心）
 theme:
   name: material
@@ -19,5 +22,4 @@ markdown_extensions:
 # 左侧导航（对应一/二级标题）
 nav:
   - 首页: index.md
-  - EC300用户手册:  # 一级标题（左侧导航）
-      - EC300手册V1.3.1: EC300/zh/EC300用户手册_V1.3.1_Udesk.md  # 二级标题（左侧导航子项）
+  - EC300手册V1.3.1: EC300/zh/EC300用户手册_V1.3.1_Udesk.md  # 二级标题（左侧导航子项）
