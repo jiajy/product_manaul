@@ -2,18 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jiajy.github.io/product_manaul/</loc>
-         <lastmod>2026-01-08</lastmod>
+         <lastmod>2026-01-09</lastmod>
+    </url>
+    <url>
+         <loc>https://jiajy.github.io/product_manaul/index2/</loc>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://jiajy.github.io/product_manaul/EC300/en/EC300_markdown%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C/</loc>
-         <lastmod>2026-01-08</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://jiajy.github.io/product_manaul/EC300/zh/EC300_markdown%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C/</loc>
-         <lastmod>2026-01-08</lastmod>
+         <lastmod>2026-01-09</lastmod>
     </url>
     <url>
          <loc>https://jiajy.github.io/product_manaul/EC300/zh/EC300%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C_V1.3.1_Udesk/</loc>
-         <lastmod>2026-01-08</lastmod>
+         <lastmod>2026-01-09</lastmod>
+    </url>
+    <url>
+         <loc>https://jiajy.github.io/product_manaul/guide/gitbook-like/</loc>
+         <lastmod>2026-01-09</lastmod>
     </url>
 </urlset>
