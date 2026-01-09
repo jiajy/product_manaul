@@ -1,12 +1,16 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="zh" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Documentation powered by MkDocs (Material)">
       
+      
+      
+        <link rel="canonical" href="https://jiajy.github.io/product_manaul/EC300/zh/EC300_markdown%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C/">
       
       
       
@@ -14,16 +18,19 @@
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>问一、 EC300面板 - 你的文档名称</title>
+        <title>问一、 EC300面板 - 用户手册</title>
       
     
     
       <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -42,6 +49,8 @@
       
     
     
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -51,7 +60,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -61,7 +77,7 @@
       
         
         <a href="#ec300" class="md-skip">
-          Skip to content
+          跳转至
         </a>
       
     </div>
@@ -72,14 +88,11 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="你的文档名称" class="md-header__button md-logo" aria-label="你的文档名称" data-md-component="logo">
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="用户手册" class="md-header__button md-logo" aria-label="用户手册" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -90,7 +103,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            你的文档名称
+            用户手册
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -102,6 +115,24 @@
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="green"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -118,27 +149,29 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="查找">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            正在初始化搜索引擎
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -149,6 +182,18 @@
       
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/jiajy/product_manaul" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jiajy/product_manaul
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -157,6 +202,54 @@
       
       
         
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../guide/gitbook-like/" class="md-tabs__link">
+          
+  
+  
+  写作示例
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
           
         
       
@@ -171,19 +264,30 @@
                     
 
 
-
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="你的文档名称" class="md-nav__button md-logo" aria-label="你的文档名称" data-md-component="logo">
+    <a href="../../.." title="用户手册" class="md-nav__button md-logo" aria-label="用户手册" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../../assets/logo.svg" alt="logo">
 
     </a>
-    你的文档名称
+    用户手册
   </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/jiajy/product_manaul" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    jiajy/product_manaul
+  </div>
+</a>
+    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -225,26 +329,26 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    EC300用户手册
+    写作示例
   
 
     
@@ -260,7 +364,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    EC300用户手册
+    写作示例
   
 
           </label>
@@ -273,14 +377,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../EC300%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C_V1.3.1_Udesk/" class="md-nav__link">
+      <a href="../../../guide/gitbook-like/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    EC300手册V1.3.1
+    GitBook 同款能力
   
 
     
@@ -308,6 +412,65 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#221" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.1 正面板
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#222" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.2 左侧面板
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#223" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.3 右侧面板
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -316,6 +479,14 @@
                 
                   
 
+
+  
+    <a href="https://github.com/jiajy/product_manaul/edit/main/product_manaul/EC300/zh/EC300_markdown测试结果.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
 
 
 <h1 id="ec300">问一、 EC300面板<a class="headerlink" href="#ec300" title="Permanent link">&para;</a></h1>
@@ -401,18 +572,34 @@
 </li>
 </ul>
 <p>：</p>
-<p>```
-   Bash</p>
-<p>ssh edge@192.168.3.100  # 默认密码：security@edge
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>Bash
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>ssh edge@192.168.3.100  # 默认密码：security@edge
+</code></pre></div></td></tr></table></div>
 <ol>
 <li>权限提升</li>
 </ol>
 <p>：</p>
-<p>```
-   Bash</p>
-<p>sudo -s  # 切换至root用户（首次使用需输入edge用户密码）
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>Bash
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>sudo -s  # 切换至root用户（首次使用需输入edge用户密码）
+</code></pre></div></td></tr></table></div>
 <p><strong>注意事项：</strong></p>
 <ul>
 <li>出厂默认账户：<code>edge/security@edge</code></li>
@@ -459,27 +646,48 @@
 <li>创建用户</li>
 </ol>
 <p>（以创建test1用户为例）：</p>
-<p>```
-   Bash</p>
-<p>sudo useradd -m -G sudo -s /bin/bash test1  # -m创建主目录，-G加入sudo组，-s指定shell
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>Bash
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>sudo useradd -m -G sudo -s /bin/bash test1  # -m创建主目录，-G加入sudo组，-s指定shell
+</code></pre></div></td></tr></table></div>
 <ol>
 <li>设置密码</li>
 </ol>
 <p>：</p>
-<p>```
-   Bash</p>
-<p>sudo passwd test1  # 按提示输入两次新密码
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>Bash
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>sudo passwd test1  # 按提示输入两次新密码
+</code></pre></div></td></tr></table></div>
 <p><img alt="img" src="https://inhandwww-resources.s3.cn-north-1.amazonaws.com.cn/EC300/media/document_image_rId21.png" /></p>
 <h3 id="323">3.2.3 删除用户账户<a class="headerlink" href="#323" title="Permanent link">&para;</a></h3>
-<pre><code>Bash
-
-
-
-
-sudo userdel -r test1  # -r参数同步删除用户主目录
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>Bash
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>sudo userdel -r test1  # -r参数同步删除用户主目录
+</code></pre></div></td></tr></table></div>
 <p><img alt="img" src="https://inhandwww-resources.s3.cn-north-1.amazonaws.com.cn/EC300/media/document_image_rId22.png" /></p>
 <h3 id="_6">关键注意事项<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <ol>
@@ -494,17 +702,33 @@ sudo userdel -r test1  # -r参数同步删除用户主目录
 <ul>
 <li>
 <p>创建新用户后，建议禁用默认edge账户：</p>
-<p>```
- Bash</p>
-<p>sudo passwd -l edge  # 锁定账户
- ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>Bash
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>sudo passwd -l edge  # 锁定账户
+</code></pre></div></td></tr></table></div>
 </li>
 <li>
 <p>解锁edge账户（如需恢复）：</p>
-<p>```
- Bash</p>
-<p>sudo passwd -u edge
- ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>Bash
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>sudo passwd -u edge
+</code></pre></div></td></tr></table></div>
 </li>
 <li>
 <p>用户组管理</p>
@@ -516,14 +740,20 @@ sudo userdel -r test1  # -r参数同步删除用户主目录
 <li>添加用户组：<code>sudo usermod -aG &lt;组名&gt; &lt;用户名&gt;</code></li>
 </ul>
 <h3 id="_7">操作验证<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<pre><code>Bash
-
-
-
-
-id test1  # 检查用户是否创建成功
-ls /home  # 确认用户目录是否存在
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>Bash
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>id test1  # 检查用户是否创建成功
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>ls /home  # 确认用户目录是否存在
+</code></pre></div></td></tr></table></div>
 <p>如需更详细的权限配置指导，可参考手册第5章关于sudo机制的说明。需要进一步帮助可随时告知。</p>
 <h1 id="web">问五、怎么使用web进行管理<a class="headerlink" href="#web" title="Permanent link">&para;</a></h1>
 <p>根据EC300用户手册，通过Web界面管理设备的操作流程如下：</p>
@@ -533,17 +763,16 @@ ls /home  # 确认用户目录是否存在
 <li>访问地址</li>
 </ul>
 <p>：</p>
-<p>```
-  https://&lt;设备IP&gt;:9100  # 示例：https://192.168.4.100:9100</p>
-<p>```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>https://&lt;设备IP&gt;:9100  # 示例：https://192.168.4.100:9100
+</code></pre></div></td></tr></table></div>
 <ul>
 <li>默认凭证</li>
 </ul>
 <p>：</p>
-<p>```
-  用户名：adm<br />
-  密码：123456</p>
-<p>```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>用户名：adm  
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>密码：123456
+</code></pre></div></td></tr></table></div>
 <p><img alt="img" src="https://inhandwww-resources.s3.cn-north-1.amazonaws.com.cn/EC300/media/document_image_rId26.png" /></p>
 <h4 id="2">2. 关键管理功能<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
 <h5 id="_8">▶ 网络配置<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h5>
@@ -841,11 +1070,20 @@ ls /home  # 确认用户目录是否存在
 <li>
 <p>长灭状态</p>
 <p>：</p>
-<p>```
- Bash</p>
-<p>sudo systemctl status edge-core  # 检查主服务状态
- journalctl -u edge-core -n 50    # 查看最近50条日志
- ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span>
+<span class="normal"><a href="#__codelineno-10-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>Bash
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>sudo systemctl status edge-core  # 检查主服务状态
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>journalctl -u edge-core -n 50    # 查看最近50条日志
+</code></pre></div></td></tr></table></div>
 </li>
 <li>
 <p><strong>快速闪烁（&gt;2Hz）</strong>：可能为系统崩溃循环重启</p>
@@ -888,17 +1126,26 @@ ls /home  # 确认用户目录是否存在
 <hr />
 <h3 id="_17"><strong>用户编程指示灯控制方法</strong><a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
 <p>通过sysfs接口控制User1灯示例：</p>
-<pre><code>Bash
-
-
-
-
-# 点亮User1（红色）
-echo 1 &gt; /sys/class/leds/user1/brightness
-
-# 设置为心跳模式
-echo heartbeat &gt; /sys/class/leds/user1/trigger
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>Bash
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a># 点亮User1（红色）
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>echo 1 &gt; /sys/class/leds/user1/brightness
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a># 设置为心跳模式
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a>echo heartbeat &gt; /sys/class/leds/user1/trigger
+</code></pre></div></td></tr></table></div>
 <p>支持的模式：<code>none|timer|heartbeat|mmc0|default-on</code></p>
 <hr />
 <h3 id="_18"><strong>指示灯布局参考图</strong><a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
@@ -970,13 +1217,24 @@ echo heartbeat &gt; /sys/class/leds/user1/trigger
 <p><strong>天线安装</strong>：</p>
 </li>
 </ol>
-<p>```
-   Bash</p>
-<p># 标准SMA接口连接流程
-   1. 对齐天线接头与设备接口中心导体
-   2. 顺时针旋转接头直至听到"咔嗒"声（扭矩≈0.8N·m）
-   3. 轻拉天线确认无松动
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span>
+<span class="normal"><a href="#__codelineno-12-6">6</a></span>
+<span class="normal"><a href="#__codelineno-12-7">7</a></span>
+<span class="normal"><a href="#__codelineno-12-8">8</a></span>
+<span class="normal"><a href="#__codelineno-12-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>Bash
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a># 标准SMA接口连接流程
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>1. 对齐天线接头与设备接口中心导体
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a>2. 顺时针旋转接头直至听到&quot;咔嗒&quot;声（扭矩≈0.8N·m）
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a>3. 轻拉天线确认无松动
+</code></pre></div></td></tr></table></div>
 <ol>
 <li>
 <p><strong>防雷措施</strong>（户外安装必需）：</p>
@@ -991,11 +1249,20 @@ echo heartbeat &gt; /sys/class/leds/user1/trigger
 <ul>
 <li><strong>频段匹配</strong>：</li>
 </ul>
-<p>```
-  Bash</p>
-<p># 查询当前使用频段（需root权限）
-  mmcli -m 0 --command='AT+QCFG="band"'
-  ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span>
+<span class="normal"><a href="#__codelineno-13-5">5</a></span>
+<span class="normal"><a href="#__codelineno-13-6">6</a></span>
+<span class="normal"><a href="#__codelineno-13-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>Bash
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a># 查询当前使用频段（需root权限）
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a>mmcli -m 0 --command=&#39;AT+QCFG=&quot;band&quot;&#39;
+</code></pre></div></td></tr></table></div>
 <p>确保天线支持：</p>
 <ul>
 <li>4G：B1/B3/B5/B8（中国移动）</li>
@@ -1015,10 +1282,18 @@ echo heartbeat &gt; /sys/class/leds/user1/trigger
 <li>定位测试</li>
 </ul>
 <p>：</p>
-<p>```
-  Bash</p>
-<p>gpsmon /dev/ttyACM0  # 查看卫星锁定状态（需≥4颗）
-  ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span>
+<span class="normal"><a href="#__codelineno-14-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>Bash
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a>gpsmon /dev/ttyACM0  # 查看卫星锁定状态（需≥4颗）
+</code></pre></div></td></tr></table></div>
 <ul>
 <li>防干扰</li>
 </ul>
@@ -1098,18 +1373,28 @@ echo heartbeat &gt; /sys/class/leds/user1/trigger
 </tbody>
 </table>
 <h4 id="2-apnprofiles"><strong>2. APN配置组（Profiles）</strong><a class="headerlink" href="#2-apnprofiles" title="Permanent link">&para;</a></h4>
-<pre><code>JSON
-
-
-
-
-{
-  &quot;APN&quot;: &quot;cmnet&quot;,
-  &quot;Username&quot;: &quot;user1&quot;,
-  &quot;Password&quot;: &quot;pass123&quot;,
-  &quot;Authentication&quot;: &quot;PAP&quot;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>JSON
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a>{
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a>  &quot;APN&quot;: &quot;cmnet&quot;,
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a>  &quot;Username&quot;: &quot;user1&quot;,
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a>  &quot;Password&quot;: &quot;pass123&quot;,
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a>  &quot;Authentication&quot;: &quot;PAP&quot;
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a>}
+</code></pre></div></td></tr></table></div>
 <ul>
 <li>APN</li>
 </ul>
@@ -1160,11 +1445,34 @@ echo heartbeat &gt; /sys/class/leds/user1/trigger
 <ol>
 <li><strong>拨号流程</strong>：</li>
 </ol>
-<p>```
-   Mermaid</p>
-<p>经典</p>
-<p>手绘</p>
-<p>```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-16-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-16-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-16-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-16-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-16-10">10</a></span>
+<span class="normal"><a href="#__codelineno-16-11">11</a></span>
+<span class="normal"><a href="#__codelineno-16-12">12</a></span>
+<span class="normal"><a href="#__codelineno-16-13">13</a></span>
+<span class="normal"><a href="#__codelineno-16-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>Mermaid
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a>
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a>
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a>经典
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a>
+<a id="__codelineno-16-14" name="__codelineno-16-14"></a>手绘
+</code></pre></div></td></tr></table></div>
 <ol>
 <li>
 <p><strong>双卡切换条件</strong>（需开启Dual SIM）：</p>
@@ -1188,17 +1496,26 @@ echo heartbeat &gt; /sys/class/leds/user1/trigger
 <p>​</p>
 <p><img alt="img" src="https://inhandwww-resources.s3.cn-north-1.amazonaws.com.cn/EC300/media/document_image_rId31.png" /></p>
 <h4 id="_24"><strong>通过命令行配置</strong><a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
-<pre><code>Bash
-
-
-
-
-# 查看当前拨号状态
-mmcli -m 0
-
-# 强制刷新网络注册（解决信号满格但无法上网）
-sudo mmcli -m 0 --command='AT+COPS=0'
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>Bash
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a># 查看当前拨号状态
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a>mmcli -m 0
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a># 强制刷新网络注册（解决信号满格但无法上网）
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a>sudo mmcli -m 0 --command=&#39;AT+COPS=0&#39;
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="_25"><strong>故障排查表</strong><a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
 <table>
@@ -1267,9 +1584,8 @@ sudo mmcli -m 0 --command='AT+COPS=0'
 <ol>
 <li>登录EC300的Web管理页面：</li>
 </ol>
-<p>```
-   https://&lt;设备IP&gt;:9100  # 默认用户名adm，密码123456</p>
-<p>```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>https://&lt;设备IP&gt;:9100  # 默认用户名adm，密码123456
+</code></pre></div></td></tr></table></div>
 <ol>
 <li>进入</li>
 </ol>
@@ -1281,26 +1597,44 @@ sudo mmcli -m 0 --command='AT+COPS=0'
 <li>扫描并选择目标路由器SSID，输入密码后保存。</li>
 </ol>
 <h4 id="_27"><strong>方法二：通过命令行配置</strong><a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
-<pre><code>Bash
-
-
-
-
-# 扫描可用网络
-sudo iwlist wlan0 scan | grep ESSID
-
-# 生成配置文件（以SSID: MyRouter, 密码: mypass123为例）
-sudo sh -c 'cat &gt; /etc/wpa_supplicant.conf &lt;&lt;EOF
-network={
-    ssid=&quot;MyRouter&quot;
-    psk=&quot;mypass123&quot;
-}
-EOF'
-
-# 启动连接
-sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant.conf
-sudo dhclient wlan0  # 获取IP地址
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-19-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-19-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-19-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-19-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-19-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-19-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-19-10">10</a></span>
+<span class="normal"><a href="#__codelineno-19-11">11</a></span>
+<span class="normal"><a href="#__codelineno-19-12">12</a></span>
+<span class="normal"><a href="#__codelineno-19-13">13</a></span>
+<span class="normal"><a href="#__codelineno-19-14">14</a></span>
+<span class="normal"><a href="#__codelineno-19-15">15</a></span>
+<span class="normal"><a href="#__codelineno-19-16">16</a></span>
+<span class="normal"><a href="#__codelineno-19-17">17</a></span>
+<span class="normal"><a href="#__codelineno-19-18">18</a></span>
+<span class="normal"><a href="#__codelineno-19-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>Bash
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a>
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a># 扫描可用网络
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a>sudo iwlist wlan0 scan | grep ESSID
+<a id="__codelineno-19-8" name="__codelineno-19-8"></a>
+<a id="__codelineno-19-9" name="__codelineno-19-9"></a># 生成配置文件（以SSID: MyRouter, 密码: mypass123为例）
+<a id="__codelineno-19-10" name="__codelineno-19-10"></a>sudo sh -c &#39;cat &gt; /etc/wpa_supplicant.conf &lt;&lt;EOF
+<a id="__codelineno-19-11" name="__codelineno-19-11"></a>network={
+<a id="__codelineno-19-12" name="__codelineno-19-12"></a>    ssid=&quot;MyRouter&quot;
+<a id="__codelineno-19-13" name="__codelineno-19-13"></a>    psk=&quot;mypass123&quot;
+<a id="__codelineno-19-14" name="__codelineno-19-14"></a>}
+<a id="__codelineno-19-15" name="__codelineno-19-15"></a>EOF&#39;
+<a id="__codelineno-19-16" name="__codelineno-19-16"></a>
+<a id="__codelineno-19-17" name="__codelineno-19-17"></a># 启动连接
+<a id="__codelineno-19-18" name="__codelineno-19-18"></a>sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant.conf
+<a id="__codelineno-19-19" name="__codelineno-19-19"></a>sudo dhclient wlan0  # 获取IP地址
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="3_3"><strong>3. 连接状态验证</strong><a class="headerlink" href="#3_3" title="Permanent link">&para;</a></h3>
 <table>
@@ -1333,30 +1667,48 @@ sudo dhclient wlan0  # 获取IP地址
 <h3 id="4_1"><strong>4. 高级配置</strong><a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h3>
 <h4 id="_28"><strong>多网络优先级</strong><a class="headerlink" href="#_28" title="Permanent link">&para;</a></h4>
 <p>编辑<code>/etc/network/interfaces</code>设置路由优先级：</p>
-<pre><code>Bash
-
-
-
-
-# 使WiFi路由优先级高于蜂窝网络（metric值越小优先级越高）
-up route add default gw &lt;路由器网关IP&gt; dev wlan0 metric 50
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span>
+<span class="normal"><a href="#__codelineno-20-5">5</a></span>
+<span class="normal"><a href="#__codelineno-20-6">6</a></span>
+<span class="normal"><a href="#__codelineno-20-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a>Bash
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a># 使WiFi路由优先级高于蜂窝网络（metric值越小优先级越高）
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a>up route add default gw &lt;路由器网关IP&gt; dev wlan0 metric 50
+</code></pre></div></td></tr></table></div>
 <h4 id="_29"><strong>企业级认证</strong><a class="headerlink" href="#_29" title="Permanent link">&para;</a></h4>
 <p>在<code>wpa_supplicant.conf</code>中添加：</p>
-<pre><code>Ini
-
-
-
-
-network={
-    ssid=&quot;Enterprise_SSID&quot;
-    key_mgmt=WPA-EAP
-    eap=PEAP
-    identity=&quot;用户名&quot;
-    password=&quot;密码&quot;
-    phase2=&quot;auth=MSCHAPV2&quot;
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-21-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-21-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-21-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-21-10">10</a></span>
+<span class="normal"><a href="#__codelineno-21-11">11</a></span>
+<span class="normal"><a href="#__codelineno-21-12">12</a></span>
+<span class="normal"><a href="#__codelineno-21-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>Ini
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a>network={
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a>    ssid=&quot;Enterprise_SSID&quot;
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a>    key_mgmt=WPA-EAP
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a>    eap=PEAP
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a>    identity=&quot;用户名&quot;
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a>    password=&quot;密码&quot;
+<a id="__codelineno-21-12" name="__codelineno-21-12"></a>    phase2=&quot;auth=MSCHAPV2&quot;
+<a id="__codelineno-21-13" name="__codelineno-21-13"></a>}
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="5_1"><strong>5. 故障处理</strong><a class="headerlink" href="#5_1" title="Permanent link">&para;</a></h3>
 <table>
@@ -1431,11 +1783,20 @@ network={
 <p><strong>内核支持检查</strong>：</p>
 </li>
 </ul>
-<p>```
-  Bash</p>
-<p>sudo modprobe iptable_nat  # 加载NAT模块
-  lsmod | grep nat           # 确认输出包含<code>nf_nat</code>和<code>iptable_nat</code>
-  ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span>
+<span class="normal"><a href="#__codelineno-22-4">4</a></span>
+<span class="normal"><a href="#__codelineno-22-5">5</a></span>
+<span class="normal"><a href="#__codelineno-22-6">6</a></span>
+<span class="normal"><a href="#__codelineno-22-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a>Bash
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a>sudo modprobe iptable_nat  # 加载NAT模块
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a>lsmod | grep nat           # 确认输出包含`nf_nat`和`iptable_nat`
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="2-natip"><strong>2. 基础NAT配置（IP伪装）</strong><a class="headerlink" href="#2-natip" title="Permanent link">&para;</a></h3>
 <h4 id="ieos-web"><strong>通过IEOS Web界面配置</strong><a class="headerlink" href="#ieos-web" title="Permanent link">&para;</a></h4>
@@ -1462,35 +1823,57 @@ network={
 <li><strong>动作</strong>：<code>MASQUERADE</code></li>
 </ol>
 <h4 id="_31"><strong>通过命令行配置</strong><a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
-<pre><code>Bash
-
-
-
-
-# 启用IP转发
-sudo sysctl -w net.ipv4.ip_forward=1
-echo &quot;net.ipv4.ip_forward=1&quot; | sudo tee -a /etc/sysctl.conf
-
-# 设置MASQUERADE规则（动态IP适用）
-sudo iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
-
-# 静态IP时改用SNAT
-sudo iptables -t nat -A POSTROUTING -o eth1 -j SNAT --to-source &lt;WAN_IP&gt;
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-23-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-23-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-23-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-23-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-23-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-23-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-23-10">10</a></span>
+<span class="normal"><a href="#__codelineno-23-11">11</a></span>
+<span class="normal"><a href="#__codelineno-23-12">12</a></span>
+<span class="normal"><a href="#__codelineno-23-13">13</a></span>
+<span class="normal"><a href="#__codelineno-23-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>Bash
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a># 启用IP转发
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a>sudo sysctl -w net.ipv4.ip_forward=1
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a>echo &quot;net.ipv4.ip_forward=1&quot; | sudo tee -a /etc/sysctl.conf
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a>
+<a id="__codelineno-23-10" name="__codelineno-23-10"></a># 设置MASQUERADE规则（动态IP适用）
+<a id="__codelineno-23-11" name="__codelineno-23-11"></a>sudo iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
+<a id="__codelineno-23-12" name="__codelineno-23-12"></a>
+<a id="__codelineno-23-13" name="__codelineno-23-13"></a># 静态IP时改用SNAT
+<a id="__codelineno-23-14" name="__codelineno-23-14"></a>sudo iptables -t nat -A POSTROUTING -o eth1 -j SNAT --to-source &lt;WAN_IP&gt;
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="3_4"><strong>3. 端口转发配置</strong><a class="headerlink" href="#3_4" title="Permanent link">&para;</a></h3>
 <h4 id="wan808080"><strong>场景示例：将WAN口8080端口映射到内网服务器的80端口</strong><a class="headerlink" href="#wan808080" title="Permanent link">&para;</a></h4>
-<pre><code>Bash
-
-
-
-
-# DNAT规则
-sudo iptables -t nat -A PREROUTING -i eth1 -p tcp --dport 8080 -j DNAT --to-destination 192.168.1.100:80
-
-# 允许转发流量
-sudo iptables -A FORWARD -i eth1 -o eth0 -p tcp --dport 80 -d 192.168.1.100 -j ACCEPT
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-24-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-24-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-24-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-24-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-24-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-24-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-24-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-24-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a>Bash
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a>
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a># DNAT规则
+<a id="__codelineno-24-7" name="__codelineno-24-7"></a>sudo iptables -t nat -A PREROUTING -i eth1 -p tcp --dport 8080 -j DNAT --to-destination 192.168.1.100:80
+<a id="__codelineno-24-8" name="__codelineno-24-8"></a>
+<a id="__codelineno-24-9" name="__codelineno-24-9"></a># 允许转发流量
+<a id="__codelineno-24-10" name="__codelineno-24-10"></a>sudo iptables -A FORWARD -i eth1 -o eth0 -p tcp --dport 80 -d 192.168.1.100 -j ACCEPT
+</code></pre></div></td></tr></table></div>
 <h4 id="ieos-web_1"><strong>IEOS Web界面操作</strong><a class="headerlink" href="#ieos-web_1" title="Permanent link">&para;</a></h4>
 <ol>
 <li>进入 <strong>防火墙 → 端口转发</strong></li>
@@ -1502,15 +1885,22 @@ sudo iptables -A FORWARD -i eth1 -o eth0 -p tcp --dport 80 -d 192.168.1.100 -j A
 </ol>
 <hr />
 <h3 id="4_2"><strong>4. 规则持久化</strong><a class="headerlink" href="#4_2" title="Permanent link">&para;</a></h3>
-<pre><code>Bash
-
-
-
-
-# 保存iptables规则（Debian系统）
-sudo apt install iptables-persistent
-sudo netfilter-persistent save
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span>
+<span class="normal"><a href="#__codelineno-25-4">4</a></span>
+<span class="normal"><a href="#__codelineno-25-5">5</a></span>
+<span class="normal"><a href="#__codelineno-25-6">6</a></span>
+<span class="normal"><a href="#__codelineno-25-7">7</a></span>
+<span class="normal"><a href="#__codelineno-25-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>Bash
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a>
+<a id="__codelineno-25-6" name="__codelineno-25-6"></a># 保存iptables规则（Debian系统）
+<a id="__codelineno-25-7" name="__codelineno-25-7"></a>sudo apt install iptables-persistent
+<a id="__codelineno-25-8" name="__codelineno-25-8"></a>sudo netfilter-persistent save
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="5_2"><strong>5. 验证与调试</strong><a class="headerlink" href="#5_2" title="Permanent link">&para;</a></h3>
 <table>
@@ -1542,22 +1932,36 @@ sudo netfilter-persistent save
 <hr />
 <h3 id="6"><strong>6. 复杂场景配置</strong><a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
 <h4 id="wan"><strong>多WAN口负载均衡</strong><a class="headerlink" href="#wan" title="Permanent link">&para;</a></h4>
-<pre><code>Bash
-
-
-
-
-# 创建自定义路由表
-echo &quot;201 wan1&quot; | sudo tee -a /etc/iproute2/rt_tables
-echo &quot;202 wan2&quot; | sudo tee -a /etc/iproute2/rt_tables
-
-# 策略路由+SNAT
-sudo iptables -t mangle -A PREROUTING -j CONNMARK --restore-mark
-sudo iptables -t mangle -A PREROUTING -m mark ! --mark 0 -j ACCEPT
-sudo iptables -t mangle -A PREROUTING -m statistic --mode random --probability 0.5 -j MARK --set-mark 1
-sudo iptables -t nat -A POSTROUTING -o eth1 -j SNAT --to-source &lt;WAN1_IP&gt;
-sudo iptables -t nat -A POSTROUTING -o eth2 -j SNAT --to-source &lt;WAN2_IP&gt;
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-26-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-26-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-26-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-26-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-26-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-26-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-26-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-26-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-26-10">10</a></span>
+<span class="normal"><a href="#__codelineno-26-11">11</a></span>
+<span class="normal"><a href="#__codelineno-26-12">12</a></span>
+<span class="normal"><a href="#__codelineno-26-13">13</a></span>
+<span class="normal"><a href="#__codelineno-26-14">14</a></span>
+<span class="normal"><a href="#__codelineno-26-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a>Bash
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a>
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a>
+<a id="__codelineno-26-5" name="__codelineno-26-5"></a>
+<a id="__codelineno-26-6" name="__codelineno-26-6"></a># 创建自定义路由表
+<a id="__codelineno-26-7" name="__codelineno-26-7"></a>echo &quot;201 wan1&quot; | sudo tee -a /etc/iproute2/rt_tables
+<a id="__codelineno-26-8" name="__codelineno-26-8"></a>echo &quot;202 wan2&quot; | sudo tee -a /etc/iproute2/rt_tables
+<a id="__codelineno-26-9" name="__codelineno-26-9"></a>
+<a id="__codelineno-26-10" name="__codelineno-26-10"></a># 策略路由+SNAT
+<a id="__codelineno-26-11" name="__codelineno-26-11"></a>sudo iptables -t mangle -A PREROUTING -j CONNMARK --restore-mark
+<a id="__codelineno-26-12" name="__codelineno-26-12"></a>sudo iptables -t mangle -A PREROUTING -m mark ! --mark 0 -j ACCEPT
+<a id="__codelineno-26-13" name="__codelineno-26-13"></a>sudo iptables -t mangle -A PREROUTING -m statistic --mode random --probability 0.5 -j MARK --set-mark 1
+<a id="__codelineno-26-14" name="__codelineno-26-14"></a>sudo iptables -t nat -A POSTROUTING -o eth1 -j SNAT --to-source &lt;WAN1_IP&gt;
+<a id="__codelineno-26-15" name="__codelineno-26-15"></a>sudo iptables -t nat -A POSTROUTING -o eth2 -j SNAT --to-source &lt;WAN2_IP&gt;
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="_32"><strong>注意事项</strong><a class="headerlink" href="#_32" title="Permanent link">&para;</a></h3>
 <ol>
@@ -1599,10 +2003,18 @@ sudo iptables -t nat -A POSTROUTING -o eth2 -j SNAT --to-source &lt;WAN2_IP&gt;
 </li>
 <li>确保已安装OpenVPN软件包（出厂默认预装）</li>
 </ul>
-<p>```
-  Bash</p>
-<p>sudo apt install openvpn  # 若未安装则执行
-  ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<span class="normal"><a href="#__codelineno-27-2">2</a></span>
+<span class="normal"><a href="#__codelineno-27-3">3</a></span>
+<span class="normal"><a href="#__codelineno-27-4">4</a></span>
+<span class="normal"><a href="#__codelineno-27-5">5</a></span>
+<span class="normal"><a href="#__codelineno-27-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a>Bash
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a>
+<a id="__codelineno-27-4" name="__codelineno-27-4"></a>
+<a id="__codelineno-27-5" name="__codelineno-27-5"></a>
+<a id="__codelineno-27-6" name="__codelineno-27-6"></a>sudo apt install openvpn  # 若未安装则执行
+</code></pre></div></td></tr></table></div>
 <ul>
 <li>
 <p><strong>证书准备</strong>：</p>
@@ -1623,9 +2035,8 @@ sudo iptables -t nat -A POSTROUTING -o eth2 -j SNAT --to-source &lt;WAN2_IP&gt;
 <ol>
 <li>登录EC300的Web管理页面：</li>
 </ol>
-<p>```
-   https://&lt;设备IP&gt;:9100  # 默认用户名adm，密码123456</p>
-<p>```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a>https://&lt;设备IP&gt;:9100  # 默认用户名adm，密码123456
+</code></pre></div></td></tr></table></div>
 <ol>
 <li>进入</li>
 </ol>
@@ -1650,41 +2061,76 @@ sudo iptables -t nat -A POSTROUTING -o eth2 -j SNAT --to-source &lt;WAN2_IP&gt;
 <ol>
 <li>创建配置文件：</li>
 </ol>
-<p>```
-   Bash</p>
-<p>sudo nano /etc/openvpn/client.conf
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
+<span class="normal"><a href="#__codelineno-29-2">2</a></span>
+<span class="normal"><a href="#__codelineno-29-3">3</a></span>
+<span class="normal"><a href="#__codelineno-29-4">4</a></span>
+<span class="normal"><a href="#__codelineno-29-5">5</a></span>
+<span class="normal"><a href="#__codelineno-29-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a>Bash
+<a id="__codelineno-29-2" name="__codelineno-29-2"></a>
+<a id="__codelineno-29-3" name="__codelineno-29-3"></a>
+<a id="__codelineno-29-4" name="__codelineno-29-4"></a>
+<a id="__codelineno-29-5" name="__codelineno-29-5"></a>
+<a id="__codelineno-29-6" name="__codelineno-29-6"></a>sudo nano /etc/openvpn/client.conf
+</code></pre></div></td></tr></table></div>
 <ol>
 <li>写入配置（示例）：</li>
 </ol>
-<p>```
-   Ini</p>
-<p>client
-   dev tun
-   proto udp
-   remote vpn.example.com 1194
-   resolv-retry infinite
-   nobind
-   persist-key
-   persist-tun
-   ca /path/to/ca.crt
-   cert /path/to/client.crt
-   key /path/to/client.key
-   cipher AES-256-CBC
-   comp-lzo yes
-   verb 3
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-30-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-30-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-30-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-30-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-30-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-30-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-30-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-30-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-30-10">10</a></span>
+<span class="normal"><a href="#__codelineno-30-11">11</a></span>
+<span class="normal"><a href="#__codelineno-30-12">12</a></span>
+<span class="normal"><a href="#__codelineno-30-13">13</a></span>
+<span class="normal"><a href="#__codelineno-30-14">14</a></span>
+<span class="normal"><a href="#__codelineno-30-15">15</a></span>
+<span class="normal"><a href="#__codelineno-30-16">16</a></span>
+<span class="normal"><a href="#__codelineno-30-17">17</a></span>
+<span class="normal"><a href="#__codelineno-30-18">18</a></span>
+<span class="normal"><a href="#__codelineno-30-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a>Ini
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a>
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a>
+<a id="__codelineno-30-4" name="__codelineno-30-4"></a>
+<a id="__codelineno-30-5" name="__codelineno-30-5"></a>
+<a id="__codelineno-30-6" name="__codelineno-30-6"></a>client
+<a id="__codelineno-30-7" name="__codelineno-30-7"></a>dev tun
+<a id="__codelineno-30-8" name="__codelineno-30-8"></a>proto udp
+<a id="__codelineno-30-9" name="__codelineno-30-9"></a>remote vpn.example.com 1194
+<a id="__codelineno-30-10" name="__codelineno-30-10"></a>resolv-retry infinite
+<a id="__codelineno-30-11" name="__codelineno-30-11"></a>nobind
+<a id="__codelineno-30-12" name="__codelineno-30-12"></a>persist-key
+<a id="__codelineno-30-13" name="__codelineno-30-13"></a>persist-tun
+<a id="__codelineno-30-14" name="__codelineno-30-14"></a>ca /path/to/ca.crt
+<a id="__codelineno-30-15" name="__codelineno-30-15"></a>cert /path/to/client.crt
+<a id="__codelineno-30-16" name="__codelineno-30-16"></a>key /path/to/client.key
+<a id="__codelineno-30-17" name="__codelineno-30-17"></a>cipher AES-256-CBC
+<a id="__codelineno-30-18" name="__codelineno-30-18"></a>comp-lzo yes
+<a id="__codelineno-30-19" name="__codelineno-30-19"></a>verb 3
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="3_5"><strong>3. 启动与验证</strong><a class="headerlink" href="#3_5" title="Permanent link">&para;</a></h3>
 <h4 id="vpn"><strong>启动VPN连接</strong><a class="headerlink" href="#vpn" title="Permanent link">&para;</a></h4>
-<pre><code>Bash
-
-
-
-
-sudo systemctl start openvpn@client  # 使用client.conf配置
-sudo systemctl enable openvpn@client # 设置开机自启
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
+<span class="normal"><a href="#__codelineno-31-2">2</a></span>
+<span class="normal"><a href="#__codelineno-31-3">3</a></span>
+<span class="normal"><a href="#__codelineno-31-4">4</a></span>
+<span class="normal"><a href="#__codelineno-31-5">5</a></span>
+<span class="normal"><a href="#__codelineno-31-6">6</a></span>
+<span class="normal"><a href="#__codelineno-31-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a>Bash
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a>
+<a id="__codelineno-31-3" name="__codelineno-31-3"></a>
+<a id="__codelineno-31-4" name="__codelineno-31-4"></a>
+<a id="__codelineno-31-5" name="__codelineno-31-5"></a>
+<a id="__codelineno-31-6" name="__codelineno-31-6"></a>sudo systemctl start openvpn@client  # 使用client.conf配置
+<a id="__codelineno-31-7" name="__codelineno-31-7"></a>sudo systemctl enable openvpn@client # 设置开机自启
+</code></pre></div></td></tr></table></div>
 <h4 id="_34"><strong>检查连接状态</strong><a class="headerlink" href="#_34" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -1721,26 +2167,40 @@ sudo systemctl enable openvpn@client # 设置开机自启
 <h3 id="4_3"><strong>4. 高级配置</strong><a class="headerlink" href="#4_3" title="Permanent link">&para;</a></h3>
 <h4 id="_35"><strong>多服务器冗余</strong><a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
 <p>在配置文件中添加多个<code>remote</code>行：</p>
-<pre><code>Ini
-
-
-
-
-remote vpn1.example.com 1194
-remote vpn2.example.com 1194
-remote-random  # 随机选择服务器
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
+<span class="normal"><a href="#__codelineno-32-2">2</a></span>
+<span class="normal"><a href="#__codelineno-32-3">3</a></span>
+<span class="normal"><a href="#__codelineno-32-4">4</a></span>
+<span class="normal"><a href="#__codelineno-32-5">5</a></span>
+<span class="normal"><a href="#__codelineno-32-6">6</a></span>
+<span class="normal"><a href="#__codelineno-32-7">7</a></span>
+<span class="normal"><a href="#__codelineno-32-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a>Ini
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a>
+<a id="__codelineno-32-3" name="__codelineno-32-3"></a>
+<a id="__codelineno-32-4" name="__codelineno-32-4"></a>
+<a id="__codelineno-32-5" name="__codelineno-32-5"></a>
+<a id="__codelineno-32-6" name="__codelineno-32-6"></a>remote vpn1.example.com 1194
+<a id="__codelineno-32-7" name="__codelineno-32-7"></a>remote vpn2.example.com 1194
+<a id="__codelineno-32-8" name="__codelineno-32-8"></a>remote-random  # 随机选择服务器
+</code></pre></div></td></tr></table></div>
 <h4 id="_36"><strong>防火墙规则</strong><a class="headerlink" href="#_36" title="Permanent link">&para;</a></h4>
 <p>允许VPN流量通过：</p>
-<pre><code>Bash
-
-
-
-
-sudo iptables -A INPUT -p udp --dport 1194 -j ACCEPT
-sudo iptables -A FORWARD -i tun0 -j ACCEPT
-sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
+<span class="normal"><a href="#__codelineno-33-2">2</a></span>
+<span class="normal"><a href="#__codelineno-33-3">3</a></span>
+<span class="normal"><a href="#__codelineno-33-4">4</a></span>
+<span class="normal"><a href="#__codelineno-33-5">5</a></span>
+<span class="normal"><a href="#__codelineno-33-6">6</a></span>
+<span class="normal"><a href="#__codelineno-33-7">7</a></span>
+<span class="normal"><a href="#__codelineno-33-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a>Bash
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a>
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a>
+<a id="__codelineno-33-4" name="__codelineno-33-4"></a>
+<a id="__codelineno-33-5" name="__codelineno-33-5"></a>
+<a id="__codelineno-33-6" name="__codelineno-33-6"></a>sudo iptables -A INPUT -p udp --dport 1194 -j ACCEPT
+<a id="__codelineno-33-7" name="__codelineno-33-7"></a>sudo iptables -A FORWARD -i tun0 -j ACCEPT
+<a id="__codelineno-33-8" name="__codelineno-33-8"></a>sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="5_3"><strong>5. 故障排查</strong><a class="headerlink" href="#5_3" title="Permanent link">&para;</a></h3>
 <table>
@@ -1771,26 +2231,50 @@ sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 <li>证书保护</li>
 </ol>
 <p>：</p>
-<p>```
-   Bash</p>
-<p>chmod 600 /etc/openvpn/*.key  # 限制私钥权限
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>
+<span class="normal"><a href="#__codelineno-34-2">2</a></span>
+<span class="normal"><a href="#__codelineno-34-3">3</a></span>
+<span class="normal"><a href="#__codelineno-34-4">4</a></span>
+<span class="normal"><a href="#__codelineno-34-5">5</a></span>
+<span class="normal"><a href="#__codelineno-34-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a>Bash
+<a id="__codelineno-34-2" name="__codelineno-34-2"></a>
+<a id="__codelineno-34-3" name="__codelineno-34-3"></a>
+<a id="__codelineno-34-4" name="__codelineno-34-4"></a>
+<a id="__codelineno-34-5" name="__codelineno-34-5"></a>
+<a id="__codelineno-34-6" name="__codelineno-34-6"></a>chmod 600 /etc/openvpn/*.key  # 限制私钥权限
+</code></pre></div></td></tr></table></div>
 <ol>
 <li>日志监控</li>
 </ol>
 <p>：</p>
-<p>```
-   Bash</p>
-<p>grep 'AUTH_FAILED' /var/log/syslog  # 检测暴力破解尝试
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span>
+<span class="normal"><a href="#__codelineno-35-2">2</a></span>
+<span class="normal"><a href="#__codelineno-35-3">3</a></span>
+<span class="normal"><a href="#__codelineno-35-4">4</a></span>
+<span class="normal"><a href="#__codelineno-35-5">5</a></span>
+<span class="normal"><a href="#__codelineno-35-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a>Bash
+<a id="__codelineno-35-2" name="__codelineno-35-2"></a>
+<a id="__codelineno-35-3" name="__codelineno-35-3"></a>
+<a id="__codelineno-35-4" name="__codelineno-35-4"></a>
+<a id="__codelineno-35-5" name="__codelineno-35-5"></a>
+<a id="__codelineno-35-6" name="__codelineno-35-6"></a>grep &#39;AUTH_FAILED&#39; /var/log/syslog  # 检测暴力破解尝试
+</code></pre></div></td></tr></table></div>
 <ol>
 <li>定期更新</li>
 </ol>
 <p>：</p>
-<p>```
-   Bash</p>
-<p>sudo apt upgrade openvpn  # 保持最新版本
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span>
+<span class="normal"><a href="#__codelineno-36-2">2</a></span>
+<span class="normal"><a href="#__codelineno-36-3">3</a></span>
+<span class="normal"><a href="#__codelineno-36-4">4</a></span>
+<span class="normal"><a href="#__codelineno-36-5">5</a></span>
+<span class="normal"><a href="#__codelineno-36-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a>Bash
+<a id="__codelineno-36-2" name="__codelineno-36-2"></a>
+<a id="__codelineno-36-3" name="__codelineno-36-3"></a>
+<a id="__codelineno-36-4" name="__codelineno-36-4"></a>
+<a id="__codelineno-36-5" name="__codelineno-36-5"></a>
+<a id="__codelineno-36-6" name="__codelineno-36-6"></a>sudo apt upgrade openvpn  # 保持最新版本
+</code></pre></div></td></tr></table></div>
 <p>如需配置OpenVPN服务器或更复杂的PKI体系，请告知具体需求。</p>
 <h1 id="_37">问十三、怎么恢复出厂设置<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h1>
 <p>根据EC300用户手册，恢复出厂设置有以下两种方法：</p>
@@ -1830,17 +2314,33 @@ sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 <ol>
 <li><strong>SSH登录设备</strong>：</li>
 </ol>
-<p>```
-   Bash</p>
-<p>ssh edge@&lt;设备IP&gt;  # 默认密码：security@edge
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span>
+<span class="normal"><a href="#__codelineno-37-2">2</a></span>
+<span class="normal"><a href="#__codelineno-37-3">3</a></span>
+<span class="normal"><a href="#__codelineno-37-4">4</a></span>
+<span class="normal"><a href="#__codelineno-37-5">5</a></span>
+<span class="normal"><a href="#__codelineno-37-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a>Bash
+<a id="__codelineno-37-2" name="__codelineno-37-2"></a>
+<a id="__codelineno-37-3" name="__codelineno-37-3"></a>
+<a id="__codelineno-37-4" name="__codelineno-37-4"></a>
+<a id="__codelineno-37-5" name="__codelineno-37-5"></a>
+<a id="__codelineno-37-6" name="__codelineno-37-6"></a>ssh edge@&lt;设备IP&gt;  # 默认密码：security@edge
+</code></pre></div></td></tr></table></div>
 <ol>
 <li><strong>执行恢复命令</strong>：</li>
 </ol>
-<p>```
-   Bash</p>
-<p>sudo inhandcfg --factory-reset
-   ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
+<span class="normal"><a href="#__codelineno-38-2">2</a></span>
+<span class="normal"><a href="#__codelineno-38-3">3</a></span>
+<span class="normal"><a href="#__codelineno-38-4">4</a></span>
+<span class="normal"><a href="#__codelineno-38-5">5</a></span>
+<span class="normal"><a href="#__codelineno-38-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a>Bash
+<a id="__codelineno-38-2" name="__codelineno-38-2"></a>
+<a id="__codelineno-38-3" name="__codelineno-38-3"></a>
+<a id="__codelineno-38-4" name="__codelineno-38-4"></a>
+<a id="__codelineno-38-5" name="__codelineno-38-5"></a>
+<a id="__codelineno-38-6" name="__codelineno-38-6"></a>sudo inhandcfg --factory-reset
+</code></pre></div></td></tr></table></div>
 <p><img alt="img" src="https://inhandwww-resources.s3.cn-north-1.amazonaws.com.cn/EC300/media/document_image_rId93.png" /></p>
 <p>​</p>
 <ol>
@@ -1895,10 +2395,18 @@ sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 </li>
 <li>
 <p>建议提前备份重要数据：</p>
-<p>```
- Bash</p>
-<p>sudo tar -czvf /tmp/backup.tar.gz /etc /home
- ```</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span>
+<span class="normal"><a href="#__codelineno-39-2">2</a></span>
+<span class="normal"><a href="#__codelineno-39-3">3</a></span>
+<span class="normal"><a href="#__codelineno-39-4">4</a></span>
+<span class="normal"><a href="#__codelineno-39-5">5</a></span>
+<span class="normal"><a href="#__codelineno-39-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a>Bash
+<a id="__codelineno-39-2" name="__codelineno-39-2"></a>
+<a id="__codelineno-39-3" name="__codelineno-39-3"></a>
+<a id="__codelineno-39-4" name="__codelineno-39-4"></a>
+<a id="__codelineno-39-5" name="__codelineno-39-5"></a>
+<a id="__codelineno-39-6" name="__codelineno-39-6"></a>sudo tar -czvf /tmp/backup.tar.gz /etc /home
+</code></pre></div></td></tr></table></div>
 </li>
 <li>
 <p><strong>硬件保留项</strong>：</p>
@@ -1990,116 +2498,202 @@ sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 <hr />
 <h3 id="2_3"><strong>2. 基础操作示例</strong><a class="headerlink" href="#2_3" title="Permanent link">&para;</a></h3>
 <h4 id="di1"><strong>读取DI1状态</strong><a class="headerlink" href="#di1" title="Permanent link">&para;</a></h4>
-<pre><code>Bash
-
-
-
-
-cat /sys/class/gpio/gpio453/value  # 返回0或1
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1">1</a></span>
+<span class="normal"><a href="#__codelineno-40-2">2</a></span>
+<span class="normal"><a href="#__codelineno-40-3">3</a></span>
+<span class="normal"><a href="#__codelineno-40-4">4</a></span>
+<span class="normal"><a href="#__codelineno-40-5">5</a></span>
+<span class="normal"><a href="#__codelineno-40-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1"></a>Bash
+<a id="__codelineno-40-2" name="__codelineno-40-2"></a>
+<a id="__codelineno-40-3" name="__codelineno-40-3"></a>
+<a id="__codelineno-40-4" name="__codelineno-40-4"></a>
+<a id="__codelineno-40-5" name="__codelineno-40-5"></a>
+<a id="__codelineno-40-6" name="__codelineno-40-6"></a>cat /sys/class/gpio/gpio453/value  # 返回0或1
+</code></pre></div></td></tr></table></div>
 <h4 id="do2"><strong>设置DO2输出高电平</strong><a class="headerlink" href="#do2" title="Permanent link">&para;</a></h4>
-<pre><code>Bash
-
-
-
-
-echo 1 &gt; /sys/class/gpio/gpio325/value
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1">1</a></span>
+<span class="normal"><a href="#__codelineno-41-2">2</a></span>
+<span class="normal"><a href="#__codelineno-41-3">3</a></span>
+<span class="normal"><a href="#__codelineno-41-4">4</a></span>
+<span class="normal"><a href="#__codelineno-41-5">5</a></span>
+<span class="normal"><a href="#__codelineno-41-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a>Bash
+<a id="__codelineno-41-2" name="__codelineno-41-2"></a>
+<a id="__codelineno-41-3" name="__codelineno-41-3"></a>
+<a id="__codelineno-41-4" name="__codelineno-41-4"></a>
+<a id="__codelineno-41-5" name="__codelineno-41-5"></a>
+<a id="__codelineno-41-6" name="__codelineno-41-6"></a>echo 1 &gt; /sys/class/gpio/gpio325/value
+</code></pre></div></td></tr></table></div>
 <h4 id="di0"><strong>实时监控DI0变化</strong><a class="headerlink" href="#di0" title="Permanent link">&para;</a></h4>
-<pre><code>Bash
-
-
-
-
-watch -n 0.1 cat /sys/class/gpio/gpio454/value
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-1">1</a></span>
+<span class="normal"><a href="#__codelineno-42-2">2</a></span>
+<span class="normal"><a href="#__codelineno-42-3">3</a></span>
+<span class="normal"><a href="#__codelineno-42-4">4</a></span>
+<span class="normal"><a href="#__codelineno-42-5">5</a></span>
+<span class="normal"><a href="#__codelineno-42-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1"></a>Bash
+<a id="__codelineno-42-2" name="__codelineno-42-2"></a>
+<a id="__codelineno-42-3" name="__codelineno-42-3"></a>
+<a id="__codelineno-42-4" name="__codelineno-42-4"></a>
+<a id="__codelineno-42-5" name="__codelineno-42-5"></a>
+<a id="__codelineno-42-6" name="__codelineno-42-6"></a>watch -n 0.1 cat /sys/class/gpio/gpio454/value
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="3-shell"><strong>3. 完整Shell脚本</strong><a class="headerlink" href="#3-shell" title="Permanent link">&para;</a></h3>
-<pre><code>Bash
-
-
-
-
-#!/bin/bash
-
-# 定义设备节点
-DO1=&quot;/sys/class/gpio/gpio324/value&quot;
-DI1=&quot;/sys/class/gpio/gpio453/value&quot;
-
-# 检查节点存在性
-if [ ! -f &quot;$DO1&quot; ]; then
-    echo &quot;错误：DO1设备节点不存在&quot;
-    exit 1
-fi
-
-# 控制循环
-while true; do
-    # 读取DI1状态并反向控制DO1
-    di_state=$(cat $DI1)
-    echo $((1 - di_state)) &gt; $DO1
-    sleep 0.5
-done
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-43-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-43-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-43-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-43-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-43-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-43-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-43-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-43-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-43-10">10</a></span>
+<span class="normal"><a href="#__codelineno-43-11">11</a></span>
+<span class="normal"><a href="#__codelineno-43-12">12</a></span>
+<span class="normal"><a href="#__codelineno-43-13">13</a></span>
+<span class="normal"><a href="#__codelineno-43-14">14</a></span>
+<span class="normal"><a href="#__codelineno-43-15">15</a></span>
+<span class="normal"><a href="#__codelineno-43-16">16</a></span>
+<span class="normal"><a href="#__codelineno-43-17">17</a></span>
+<span class="normal"><a href="#__codelineno-43-18">18</a></span>
+<span class="normal"><a href="#__codelineno-43-19">19</a></span>
+<span class="normal"><a href="#__codelineno-43-20">20</a></span>
+<span class="normal"><a href="#__codelineno-43-21">21</a></span>
+<span class="normal"><a href="#__codelineno-43-22">22</a></span>
+<span class="normal"><a href="#__codelineno-43-23">23</a></span>
+<span class="normal"><a href="#__codelineno-43-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1"></a>Bash
+<a id="__codelineno-43-2" name="__codelineno-43-2"></a>
+<a id="__codelineno-43-3" name="__codelineno-43-3"></a>
+<a id="__codelineno-43-4" name="__codelineno-43-4"></a>
+<a id="__codelineno-43-5" name="__codelineno-43-5"></a>
+<a id="__codelineno-43-6" name="__codelineno-43-6"></a>#!/bin/bash
+<a id="__codelineno-43-7" name="__codelineno-43-7"></a>
+<a id="__codelineno-43-8" name="__codelineno-43-8"></a># 定义设备节点
+<a id="__codelineno-43-9" name="__codelineno-43-9"></a>DO1=&quot;/sys/class/gpio/gpio324/value&quot;
+<a id="__codelineno-43-10" name="__codelineno-43-10"></a>DI1=&quot;/sys/class/gpio/gpio453/value&quot;
+<a id="__codelineno-43-11" name="__codelineno-43-11"></a>
+<a id="__codelineno-43-12" name="__codelineno-43-12"></a># 检查节点存在性
+<a id="__codelineno-43-13" name="__codelineno-43-13"></a>if [ ! -f &quot;$DO1&quot; ]; then
+<a id="__codelineno-43-14" name="__codelineno-43-14"></a>    echo &quot;错误：DO1设备节点不存在&quot;
+<a id="__codelineno-43-15" name="__codelineno-43-15"></a>    exit 1
+<a id="__codelineno-43-16" name="__codelineno-43-16"></a>fi
+<a id="__codelineno-43-17" name="__codelineno-43-17"></a>
+<a id="__codelineno-43-18" name="__codelineno-43-18"></a># 控制循环
+<a id="__codelineno-43-19" name="__codelineno-43-19"></a>while true; do
+<a id="__codelineno-43-20" name="__codelineno-43-20"></a>    # 读取DI1状态并反向控制DO1
+<a id="__codelineno-43-21" name="__codelineno-43-21"></a>    di_state=$(cat $DI1)
+<a id="__codelineno-43-22" name="__codelineno-43-22"></a>    echo $((1 - di_state)) &gt; $DO1
+<a id="__codelineno-43-23" name="__codelineno-43-23"></a>    sleep 0.5
+<a id="__codelineno-43-24" name="__codelineno-43-24"></a>done
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="4-python"><strong>4. Python编程示例</strong><a class="headerlink" href="#4-python" title="Permanent link">&para;</a></h3>
-<pre><code>Python
-
-
-
-
-import os
-import time
-
-# 设备节点路径
-DO2_PATH = &quot;/sys/class/gpio/gpio325/value&quot;
-DI2_PATH = &quot;/sys/class/gpio/gpio465/value&quot;
-
-def io_control():
-    try:
-        while True:
-            # 读取数字输入
-            with open(DI2_PATH, 'r') as f:
-                di_state = int(f.read().strip())
-
-            # 输出反向信号
-            with open(DO2_PATH, 'w') as f:
-                f.write(str(1 - di_state))
-
-            time.sleep(0.1)
-    except KeyboardInterrupt:
-        print(&quot;程序终止&quot;)
-
-if __name__ == &quot;__main__&quot;:
-    io_control()
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-44-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-44-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-44-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-44-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-44-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-44-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-44-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-44-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-44-10">10</a></span>
+<span class="normal"><a href="#__codelineno-44-11">11</a></span>
+<span class="normal"><a href="#__codelineno-44-12">12</a></span>
+<span class="normal"><a href="#__codelineno-44-13">13</a></span>
+<span class="normal"><a href="#__codelineno-44-14">14</a></span>
+<span class="normal"><a href="#__codelineno-44-15">15</a></span>
+<span class="normal"><a href="#__codelineno-44-16">16</a></span>
+<span class="normal"><a href="#__codelineno-44-17">17</a></span>
+<span class="normal"><a href="#__codelineno-44-18">18</a></span>
+<span class="normal"><a href="#__codelineno-44-19">19</a></span>
+<span class="normal"><a href="#__codelineno-44-20">20</a></span>
+<span class="normal"><a href="#__codelineno-44-21">21</a></span>
+<span class="normal"><a href="#__codelineno-44-22">22</a></span>
+<span class="normal"><a href="#__codelineno-44-23">23</a></span>
+<span class="normal"><a href="#__codelineno-44-24">24</a></span>
+<span class="normal"><a href="#__codelineno-44-25">25</a></span>
+<span class="normal"><a href="#__codelineno-44-26">26</a></span>
+<span class="normal"><a href="#__codelineno-44-27">27</a></span>
+<span class="normal"><a href="#__codelineno-44-28">28</a></span>
+<span class="normal"><a href="#__codelineno-44-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1"></a>Python
+<a id="__codelineno-44-2" name="__codelineno-44-2"></a>
+<a id="__codelineno-44-3" name="__codelineno-44-3"></a>
+<a id="__codelineno-44-4" name="__codelineno-44-4"></a>
+<a id="__codelineno-44-5" name="__codelineno-44-5"></a>
+<a id="__codelineno-44-6" name="__codelineno-44-6"></a>import os
+<a id="__codelineno-44-7" name="__codelineno-44-7"></a>import time
+<a id="__codelineno-44-8" name="__codelineno-44-8"></a>
+<a id="__codelineno-44-9" name="__codelineno-44-9"></a># 设备节点路径
+<a id="__codelineno-44-10" name="__codelineno-44-10"></a>DO2_PATH = &quot;/sys/class/gpio/gpio325/value&quot;
+<a id="__codelineno-44-11" name="__codelineno-44-11"></a>DI2_PATH = &quot;/sys/class/gpio/gpio465/value&quot;
+<a id="__codelineno-44-12" name="__codelineno-44-12"></a>
+<a id="__codelineno-44-13" name="__codelineno-44-13"></a>def io_control():
+<a id="__codelineno-44-14" name="__codelineno-44-14"></a>    try:
+<a id="__codelineno-44-15" name="__codelineno-44-15"></a>        while True:
+<a id="__codelineno-44-16" name="__codelineno-44-16"></a>            # 读取数字输入
+<a id="__codelineno-44-17" name="__codelineno-44-17"></a>            with open(DI2_PATH, &#39;r&#39;) as f:
+<a id="__codelineno-44-18" name="__codelineno-44-18"></a>                di_state = int(f.read().strip())
+<a id="__codelineno-44-19" name="__codelineno-44-19"></a>
+<a id="__codelineno-44-20" name="__codelineno-44-20"></a>            # 输出反向信号
+<a id="__codelineno-44-21" name="__codelineno-44-21"></a>            with open(DO2_PATH, &#39;w&#39;) as f:
+<a id="__codelineno-44-22" name="__codelineno-44-22"></a>                f.write(str(1 - di_state))
+<a id="__codelineno-44-23" name="__codelineno-44-23"></a>
+<a id="__codelineno-44-24" name="__codelineno-44-24"></a>            time.sleep(0.1)
+<a id="__codelineno-44-25" name="__codelineno-44-25"></a>    except KeyboardInterrupt:
+<a id="__codelineno-44-26" name="__codelineno-44-26"></a>        print(&quot;程序终止&quot;)
+<a id="__codelineno-44-27" name="__codelineno-44-27"></a>
+<a id="__codelineno-44-28" name="__codelineno-44-28"></a>if __name__ == &quot;__main__&quot;:
+<a id="__codelineno-44-29" name="__codelineno-44-29"></a>    io_control()
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="5_4"><strong>5. 高级功能配置</strong><a class="headerlink" href="#5_4" title="Permanent link">&para;</a></h3>
 <h4 id="_42"><strong>中断触发模式设置</strong><a class="headerlink" href="#_42" title="Permanent link">&para;</a></h4>
-<pre><code>Bash
-
-
-
-
-# 配置DI0为下降沿触发
-echo falling &gt; /sys/class/gpio/gpio454/edge
-
-# 使用poll监控事件
-#include &lt;poll.h&gt;
-struct pollfd fd = {
-    .fd = open(&quot;/sys/class/gpio/gpio454/value&quot;, O_RDONLY),
-    .events = POLLPRI
-};
-poll(&amp;fd, 1, -1);  // 阻塞等待事件
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-45-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-45-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-45-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-45-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-45-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-45-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-45-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-45-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-45-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-45-10">10</a></span>
+<span class="normal"><a href="#__codelineno-45-11">11</a></span>
+<span class="normal"><a href="#__codelineno-45-12">12</a></span>
+<span class="normal"><a href="#__codelineno-45-13">13</a></span>
+<span class="normal"><a href="#__codelineno-45-14">14</a></span>
+<span class="normal"><a href="#__codelineno-45-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1"></a>Bash
+<a id="__codelineno-45-2" name="__codelineno-45-2"></a>
+<a id="__codelineno-45-3" name="__codelineno-45-3"></a>
+<a id="__codelineno-45-4" name="__codelineno-45-4"></a>
+<a id="__codelineno-45-5" name="__codelineno-45-5"></a>
+<a id="__codelineno-45-6" name="__codelineno-45-6"></a># 配置DI0为下降沿触发
+<a id="__codelineno-45-7" name="__codelineno-45-7"></a>echo falling &gt; /sys/class/gpio/gpio454/edge
+<a id="__codelineno-45-8" name="__codelineno-45-8"></a>
+<a id="__codelineno-45-9" name="__codelineno-45-9"></a># 使用poll监控事件
+<a id="__codelineno-45-10" name="__codelineno-45-10"></a>#include &lt;poll.h&gt;
+<a id="__codelineno-45-11" name="__codelineno-45-11"></a>struct pollfd fd = {
+<a id="__codelineno-45-12" name="__codelineno-45-12"></a>    .fd = open(&quot;/sys/class/gpio/gpio454/value&quot;, O_RDONLY),
+<a id="__codelineno-45-13" name="__codelineno-45-13"></a>    .events = POLLPRI
+<a id="__codelineno-45-14" name="__codelineno-45-14"></a>};
+<a id="__codelineno-45-15" name="__codelineno-45-15"></a>poll(&amp;fd, 1, -1);  // 阻塞等待事件
+</code></pre></div></td></tr></table></div>
 <h4 id="led"><strong>LED联动控制</strong><a class="headerlink" href="#led" title="Permanent link">&para;</a></h4>
-<pre><code>Bash
-
-
-
-
-# 将User1指示灯绑定到DO1状态
-echo gpio324 &gt; /sys/class/leds/user1/trigger
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-46-1">1</a></span>
+<span class="normal"><a href="#__codelineno-46-2">2</a></span>
+<span class="normal"><a href="#__codelineno-46-3">3</a></span>
+<span class="normal"><a href="#__codelineno-46-4">4</a></span>
+<span class="normal"><a href="#__codelineno-46-5">5</a></span>
+<span class="normal"><a href="#__codelineno-46-6">6</a></span>
+<span class="normal"><a href="#__codelineno-46-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1"></a>Bash
+<a id="__codelineno-46-2" name="__codelineno-46-2"></a>
+<a id="__codelineno-46-3" name="__codelineno-46-3"></a>
+<a id="__codelineno-46-4" name="__codelineno-46-4"></a>
+<a id="__codelineno-46-5" name="__codelineno-46-5"></a>
+<a id="__codelineno-46-6" name="__codelineno-46-6"></a># 将User1指示灯绑定到DO1状态
+<a id="__codelineno-46-7" name="__codelineno-46-7"></a>echo gpio324 &gt; /sys/class/leds/user1/trigger
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="6_2"><strong>6. 电气特性注意事项</strong><a class="headerlink" href="#6_2" title="Permanent link">&para;</a></h3>
 <ol>
@@ -2150,29 +2744,42 @@ echo gpio324 &gt; /sys/class/leds/user1/trigger
 <hr />
 <h3 id="8"><strong>8. 应用案例</strong><a class="headerlink" href="#8" title="Permanent link">&para;</a></h3>
 <h4 id="modbus-rtu"><strong>Modbus RTU输出控制</strong><a class="headerlink" href="#modbus-rtu" title="Permanent link">&para;</a></h4>
-<pre><code>Bash
-
-
-
-
-# 将DO0作为Modbus线圈（地址0001H）
-sudo apt install modbus-tools
-modbus write --debug 192.168.1.100 1 5 0001 1  # 置位DO0
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-47-1">1</a></span>
+<span class="normal"><a href="#__codelineno-47-2">2</a></span>
+<span class="normal"><a href="#__codelineno-47-3">3</a></span>
+<span class="normal"><a href="#__codelineno-47-4">4</a></span>
+<span class="normal"><a href="#__codelineno-47-5">5</a></span>
+<span class="normal"><a href="#__codelineno-47-6">6</a></span>
+<span class="normal"><a href="#__codelineno-47-7">7</a></span>
+<span class="normal"><a href="#__codelineno-47-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1"></a>Bash
+<a id="__codelineno-47-2" name="__codelineno-47-2"></a>
+<a id="__codelineno-47-3" name="__codelineno-47-3"></a>
+<a id="__codelineno-47-4" name="__codelineno-47-4"></a>
+<a id="__codelineno-47-5" name="__codelineno-47-5"></a>
+<a id="__codelineno-47-6" name="__codelineno-47-6"></a># 将DO0作为Modbus线圈（地址0001H）
+<a id="__codelineno-47-7" name="__codelineno-47-7"></a>sudo apt install modbus-tools
+<a id="__codelineno-47-8" name="__codelineno-47-8"></a>modbus write --debug 192.168.1.100 1 5 0001 1  # 置位DO0
+</code></pre></div></td></tr></table></div>
 <p>如需更复杂的工业协议集成（如PROFINET IO），请告知具体需求。</p>
 <h1 id="watchdog">问十五、Watchdog 怎么编辑<a class="headerlink" href="#watchdog" title="Permanent link">&para;</a></h1>
 <p>根据EC300用户手册，配置和使用看门狗（Watchdog）的详细方法如下：</p>
 <hr />
 <h3 id="1_6"><strong>1. 硬件看门狗启用</strong><a class="headerlink" href="#1_6" title="Permanent link">&para;</a></h3>
 <h4 id="_43"><strong>设备节点</strong><a class="headerlink" href="#_43" title="Permanent link">&para;</a></h4>
-<pre><code>Bash
-
-
-
-
-/dev/watchdog0  # 主看门狗设备
-/dev/watchdog1  # 备用看门狗（可选）
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-48-1">1</a></span>
+<span class="normal"><a href="#__codelineno-48-2">2</a></span>
+<span class="normal"><a href="#__codelineno-48-3">3</a></span>
+<span class="normal"><a href="#__codelineno-48-4">4</a></span>
+<span class="normal"><a href="#__codelineno-48-5">5</a></span>
+<span class="normal"><a href="#__codelineno-48-6">6</a></span>
+<span class="normal"><a href="#__codelineno-48-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1"></a>Bash
+<a id="__codelineno-48-2" name="__codelineno-48-2"></a>
+<a id="__codelineno-48-3" name="__codelineno-48-3"></a>
+<a id="__codelineno-48-4" name="__codelineno-48-4"></a>
+<a id="__codelineno-48-5" name="__codelineno-48-5"></a>
+<a id="__codelineno-48-6" name="__codelineno-48-6"></a>/dev/watchdog0  # 主看门狗设备
+<a id="__codelineno-48-7" name="__codelineno-48-7"></a>/dev/watchdog1  # 备用看门狗（可选）
+</code></pre></div></td></tr></table></div>
 <h4 id="_44"><strong>基础操作命令</strong><a class="headerlink" href="#_44" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -2208,134 +2815,236 @@ modbus write --debug 192.168.1.100 1 5 0001 1  # 置位DO0
 <hr />
 <h3 id="2-c"><strong>2. C语言编程示例</strong><a class="headerlink" href="#2-c" title="Permanent link">&para;</a></h3>
 <h4 id="_45"><strong>完整代码</strong><a class="headerlink" href="#_45" title="Permanent link">&para;</a></h4>
-<pre><code>C
-
-
-
-
-#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-#include &lt;unistd.h&gt;
-#include &lt;fcntl.h&gt;
-#include &lt;signal.h&gt;
-
-static int fd = 0;
-
-/* 信号处理函数（优雅关闭看门狗） */
-void signal_handler(int signal) {
-    write(fd, &quot;V&quot;, 1);  // 发送关闭命令
-    close(fd);
-    exit(0);
-}
-
-int main() {
-    // 打开看门狗设备
-    fd = open(&quot;/dev/watchdog0&quot;, O_WRONLY);
-    if (fd &lt; 0) {
-        perror(&quot;无法打开看门狗设备&quot;);
-        return -1;
-    }
-
-    // 设置超时为45秒
-    int timeout = 45;
-    write(fd, &amp;timeout, sizeof(timeout));
-
-    // 注册信号处理
-    signal(SIGTERM, signal_handler);
-    signal(SIGINT, signal_handler);
-
-    // 主循环喂狗
-    while (1) {
-        write(fd, &quot;\0&quot;, 1);  // 喂狗操作
-        sleep(10);           // 喂狗间隔（必须小于超时时间）
-    }
-}
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-49-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-49-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-49-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-49-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-49-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-49-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-49-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-49-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-49-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-49-10">10</a></span>
+<span class="normal"><a href="#__codelineno-49-11">11</a></span>
+<span class="normal"><a href="#__codelineno-49-12">12</a></span>
+<span class="normal"><a href="#__codelineno-49-13">13</a></span>
+<span class="normal"><a href="#__codelineno-49-14">14</a></span>
+<span class="normal"><a href="#__codelineno-49-15">15</a></span>
+<span class="normal"><a href="#__codelineno-49-16">16</a></span>
+<span class="normal"><a href="#__codelineno-49-17">17</a></span>
+<span class="normal"><a href="#__codelineno-49-18">18</a></span>
+<span class="normal"><a href="#__codelineno-49-19">19</a></span>
+<span class="normal"><a href="#__codelineno-49-20">20</a></span>
+<span class="normal"><a href="#__codelineno-49-21">21</a></span>
+<span class="normal"><a href="#__codelineno-49-22">22</a></span>
+<span class="normal"><a href="#__codelineno-49-23">23</a></span>
+<span class="normal"><a href="#__codelineno-49-24">24</a></span>
+<span class="normal"><a href="#__codelineno-49-25">25</a></span>
+<span class="normal"><a href="#__codelineno-49-26">26</a></span>
+<span class="normal"><a href="#__codelineno-49-27">27</a></span>
+<span class="normal"><a href="#__codelineno-49-28">28</a></span>
+<span class="normal"><a href="#__codelineno-49-29">29</a></span>
+<span class="normal"><a href="#__codelineno-49-30">30</a></span>
+<span class="normal"><a href="#__codelineno-49-31">31</a></span>
+<span class="normal"><a href="#__codelineno-49-32">32</a></span>
+<span class="normal"><a href="#__codelineno-49-33">33</a></span>
+<span class="normal"><a href="#__codelineno-49-34">34</a></span>
+<span class="normal"><a href="#__codelineno-49-35">35</a></span>
+<span class="normal"><a href="#__codelineno-49-36">36</a></span>
+<span class="normal"><a href="#__codelineno-49-37">37</a></span>
+<span class="normal"><a href="#__codelineno-49-38">38</a></span>
+<span class="normal"><a href="#__codelineno-49-39">39</a></span>
+<span class="normal"><a href="#__codelineno-49-40">40</a></span>
+<span class="normal"><a href="#__codelineno-49-41">41</a></span>
+<span class="normal"><a href="#__codelineno-49-42">42</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1"></a>C
+<a id="__codelineno-49-2" name="__codelineno-49-2"></a>
+<a id="__codelineno-49-3" name="__codelineno-49-3"></a>
+<a id="__codelineno-49-4" name="__codelineno-49-4"></a>
+<a id="__codelineno-49-5" name="__codelineno-49-5"></a>
+<a id="__codelineno-49-6" name="__codelineno-49-6"></a>#include &lt;stdio.h&gt;
+<a id="__codelineno-49-7" name="__codelineno-49-7"></a>#include &lt;stdlib.h&gt;
+<a id="__codelineno-49-8" name="__codelineno-49-8"></a>#include &lt;unistd.h&gt;
+<a id="__codelineno-49-9" name="__codelineno-49-9"></a>#include &lt;fcntl.h&gt;
+<a id="__codelineno-49-10" name="__codelineno-49-10"></a>#include &lt;signal.h&gt;
+<a id="__codelineno-49-11" name="__codelineno-49-11"></a>
+<a id="__codelineno-49-12" name="__codelineno-49-12"></a>static int fd = 0;
+<a id="__codelineno-49-13" name="__codelineno-49-13"></a>
+<a id="__codelineno-49-14" name="__codelineno-49-14"></a>/* 信号处理函数（优雅关闭看门狗） */
+<a id="__codelineno-49-15" name="__codelineno-49-15"></a>void signal_handler(int signal) {
+<a id="__codelineno-49-16" name="__codelineno-49-16"></a>    write(fd, &quot;V&quot;, 1);  // 发送关闭命令
+<a id="__codelineno-49-17" name="__codelineno-49-17"></a>    close(fd);
+<a id="__codelineno-49-18" name="__codelineno-49-18"></a>    exit(0);
+<a id="__codelineno-49-19" name="__codelineno-49-19"></a>}
+<a id="__codelineno-49-20" name="__codelineno-49-20"></a>
+<a id="__codelineno-49-21" name="__codelineno-49-21"></a>int main() {
+<a id="__codelineno-49-22" name="__codelineno-49-22"></a>    // 打开看门狗设备
+<a id="__codelineno-49-23" name="__codelineno-49-23"></a>    fd = open(&quot;/dev/watchdog0&quot;, O_WRONLY);
+<a id="__codelineno-49-24" name="__codelineno-49-24"></a>    if (fd &lt; 0) {
+<a id="__codelineno-49-25" name="__codelineno-49-25"></a>        perror(&quot;无法打开看门狗设备&quot;);
+<a id="__codelineno-49-26" name="__codelineno-49-26"></a>        return -1;
+<a id="__codelineno-49-27" name="__codelineno-49-27"></a>    }
+<a id="__codelineno-49-28" name="__codelineno-49-28"></a>
+<a id="__codelineno-49-29" name="__codelineno-49-29"></a>    // 设置超时为45秒
+<a id="__codelineno-49-30" name="__codelineno-49-30"></a>    int timeout = 45;
+<a id="__codelineno-49-31" name="__codelineno-49-31"></a>    write(fd, &amp;timeout, sizeof(timeout));
+<a id="__codelineno-49-32" name="__codelineno-49-32"></a>
+<a id="__codelineno-49-33" name="__codelineno-49-33"></a>    // 注册信号处理
+<a id="__codelineno-49-34" name="__codelineno-49-34"></a>    signal(SIGTERM, signal_handler);
+<a id="__codelineno-49-35" name="__codelineno-49-35"></a>    signal(SIGINT, signal_handler);
+<a id="__codelineno-49-36" name="__codelineno-49-36"></a>
+<a id="__codelineno-49-37" name="__codelineno-49-37"></a>    // 主循环喂狗
+<a id="__codelineno-49-38" name="__codelineno-49-38"></a>    while (1) {
+<a id="__codelineno-49-39" name="__codelineno-49-39"></a>        write(fd, &quot;\0&quot;, 1);  // 喂狗操作
+<a id="__codelineno-49-40" name="__codelineno-49-40"></a>        sleep(10);           // 喂狗间隔（必须小于超时时间）
+<a id="__codelineno-49-41" name="__codelineno-49-41"></a>    }
+<a id="__codelineno-49-42" name="__codelineno-49-42"></a>}
+</code></pre></div></td></tr></table></div>
 <h4 id="_46"><strong>编译与运行</strong><a class="headerlink" href="#_46" title="Permanent link">&para;</a></h4>
-<pre><code>Bash
-
-
-
-
-gcc watchdog.c -o watchdog
-sudo ./watchdog  # 需root权限
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-50-1">1</a></span>
+<span class="normal"><a href="#__codelineno-50-2">2</a></span>
+<span class="normal"><a href="#__codelineno-50-3">3</a></span>
+<span class="normal"><a href="#__codelineno-50-4">4</a></span>
+<span class="normal"><a href="#__codelineno-50-5">5</a></span>
+<span class="normal"><a href="#__codelineno-50-6">6</a></span>
+<span class="normal"><a href="#__codelineno-50-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1"></a>Bash
+<a id="__codelineno-50-2" name="__codelineno-50-2"></a>
+<a id="__codelineno-50-3" name="__codelineno-50-3"></a>
+<a id="__codelineno-50-4" name="__codelineno-50-4"></a>
+<a id="__codelineno-50-5" name="__codelineno-50-5"></a>
+<a id="__codelineno-50-6" name="__codelineno-50-6"></a>gcc watchdog.c -o watchdog
+<a id="__codelineno-50-7" name="__codelineno-50-7"></a>sudo ./watchdog  # 需root权限
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="3-python"><strong>3. Python实现</strong><a class="headerlink" href="#3-python" title="Permanent link">&para;</a></h3>
-<pre><code>Python
-
-
-
-
-import os
-import time
-
-WD_PATH = &quot;/dev/watchdog0&quot;
-
-def watchdog_control():
-    try:
-        with open(WD_PATH, 'wb') as wd:
-            # 设置超时30秒
-            wd.write(b'\x1E')  
-            while True:
-                wd.write(b'\x00')  # 喂狗
-                time.sleep(15)     # 喂狗间隔
-    except KeyboardInterrupt:
-        with open(WD_PATH, 'wb') as wd:
-            wd.write(b'V')  # 安全关闭
-
-if __name__ == &quot;__main__&quot;:
-    watchdog_control()
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-51-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-51-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-51-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-51-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-51-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-51-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-51-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-51-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-51-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-51-10">10</a></span>
+<span class="normal"><a href="#__codelineno-51-11">11</a></span>
+<span class="normal"><a href="#__codelineno-51-12">12</a></span>
+<span class="normal"><a href="#__codelineno-51-13">13</a></span>
+<span class="normal"><a href="#__codelineno-51-14">14</a></span>
+<span class="normal"><a href="#__codelineno-51-15">15</a></span>
+<span class="normal"><a href="#__codelineno-51-16">16</a></span>
+<span class="normal"><a href="#__codelineno-51-17">17</a></span>
+<span class="normal"><a href="#__codelineno-51-18">18</a></span>
+<span class="normal"><a href="#__codelineno-51-19">19</a></span>
+<span class="normal"><a href="#__codelineno-51-20">20</a></span>
+<span class="normal"><a href="#__codelineno-51-21">21</a></span>
+<span class="normal"><a href="#__codelineno-51-22">22</a></span>
+<span class="normal"><a href="#__codelineno-51-23">23</a></span>
+<span class="normal"><a href="#__codelineno-51-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1"></a>Python
+<a id="__codelineno-51-2" name="__codelineno-51-2"></a>
+<a id="__codelineno-51-3" name="__codelineno-51-3"></a>
+<a id="__codelineno-51-4" name="__codelineno-51-4"></a>
+<a id="__codelineno-51-5" name="__codelineno-51-5"></a>
+<a id="__codelineno-51-6" name="__codelineno-51-6"></a>import os
+<a id="__codelineno-51-7" name="__codelineno-51-7"></a>import time
+<a id="__codelineno-51-8" name="__codelineno-51-8"></a>
+<a id="__codelineno-51-9" name="__codelineno-51-9"></a>WD_PATH = &quot;/dev/watchdog0&quot;
+<a id="__codelineno-51-10" name="__codelineno-51-10"></a>
+<a id="__codelineno-51-11" name="__codelineno-51-11"></a>def watchdog_control():
+<a id="__codelineno-51-12" name="__codelineno-51-12"></a>    try:
+<a id="__codelineno-51-13" name="__codelineno-51-13"></a>        with open(WD_PATH, &#39;wb&#39;) as wd:
+<a id="__codelineno-51-14" name="__codelineno-51-14"></a>            # 设置超时30秒
+<a id="__codelineno-51-15" name="__codelineno-51-15"></a>            wd.write(b&#39;\x1E&#39;)  
+<a id="__codelineno-51-16" name="__codelineno-51-16"></a>            while True:
+<a id="__codelineno-51-17" name="__codelineno-51-17"></a>                wd.write(b&#39;\x00&#39;)  # 喂狗
+<a id="__codelineno-51-18" name="__codelineno-51-18"></a>                time.sleep(15)     # 喂狗间隔
+<a id="__codelineno-51-19" name="__codelineno-51-19"></a>    except KeyboardInterrupt:
+<a id="__codelineno-51-20" name="__codelineno-51-20"></a>        with open(WD_PATH, &#39;wb&#39;) as wd:
+<a id="__codelineno-51-21" name="__codelineno-51-21"></a>            wd.write(b&#39;V&#39;)  # 安全关闭
+<a id="__codelineno-51-22" name="__codelineno-51-22"></a>
+<a id="__codelineno-51-23" name="__codelineno-51-23"></a>if __name__ == &quot;__main__&quot;:
+<a id="__codelineno-51-24" name="__codelineno-51-24"></a>    watchdog_control()
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="4_4"><strong>4. 内核参数配置</strong><a class="headerlink" href="#4_4" title="Permanent link">&para;</a></h3>
 <h4 id="_47"><strong>调整看门狗检测频率</strong><a class="headerlink" href="#_47" title="Permanent link">&para;</a></h4>
-<pre><code>Bash
-
-
-
-
-# 修改检测间隔（默认1秒）
-echo 5 &gt; /proc/sys/kernel/watchdog_thresh
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-52-1">1</a></span>
+<span class="normal"><a href="#__codelineno-52-2">2</a></span>
+<span class="normal"><a href="#__codelineno-52-3">3</a></span>
+<span class="normal"><a href="#__codelineno-52-4">4</a></span>
+<span class="normal"><a href="#__codelineno-52-5">5</a></span>
+<span class="normal"><a href="#__codelineno-52-6">6</a></span>
+<span class="normal"><a href="#__codelineno-52-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1"></a>Bash
+<a id="__codelineno-52-2" name="__codelineno-52-2"></a>
+<a id="__codelineno-52-3" name="__codelineno-52-3"></a>
+<a id="__codelineno-52-4" name="__codelineno-52-4"></a>
+<a id="__codelineno-52-5" name="__codelineno-52-5"></a>
+<a id="__codelineno-52-6" name="__codelineno-52-6"></a># 修改检测间隔（默认1秒）
+<a id="__codelineno-52-7" name="__codelineno-52-7"></a>echo 5 &gt; /proc/sys/kernel/watchdog_thresh
+</code></pre></div></td></tr></table></div>
 <h4 id="_48"><strong>禁用软件看门狗</strong><a class="headerlink" href="#_48" title="Permanent link">&para;</a></h4>
-<pre><code>Bash
-
-
-
-
-sudo systemctl stop watchdog.service
-sudo systemctl disable watchdog.service
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-53-1">1</a></span>
+<span class="normal"><a href="#__codelineno-53-2">2</a></span>
+<span class="normal"><a href="#__codelineno-53-3">3</a></span>
+<span class="normal"><a href="#__codelineno-53-4">4</a></span>
+<span class="normal"><a href="#__codelineno-53-5">5</a></span>
+<span class="normal"><a href="#__codelineno-53-6">6</a></span>
+<span class="normal"><a href="#__codelineno-53-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1"></a>Bash
+<a id="__codelineno-53-2" name="__codelineno-53-2"></a>
+<a id="__codelineno-53-3" name="__codelineno-53-3"></a>
+<a id="__codelineno-53-4" name="__codelineno-53-4"></a>
+<a id="__codelineno-53-5" name="__codelineno-53-5"></a>
+<a id="__codelineno-53-6" name="__codelineno-53-6"></a>sudo systemctl stop watchdog.service
+<a id="__codelineno-53-7" name="__codelineno-53-7"></a>sudo systemctl disable watchdog.service
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="5_5"><strong>5. 系统集成建议</strong><a class="headerlink" href="#5_5" title="Permanent link">&para;</a></h3>
 <h4 id="systemd"><strong>systemd服务单元</strong><a class="headerlink" href="#systemd" title="Permanent link">&para;</a></h4>
 <p>创建<code>/etc/systemd/system/my_watchdog.service</code>：</p>
-<pre><code>Ini
-
-
-
-
-[Unit]
-Description=Custom Watchdog Daemon
-
-[Service]
-ExecStart=/usr/local/bin/watchdog
-Restart=always
-WatchdogSec=40  # 向systemd报告心跳的超时时间
-
-[Install]
-WantedBy=multi-user.target
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-54-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-54-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-54-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-54-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-54-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-54-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-54-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-54-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-54-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-54-10">10</a></span>
+<span class="normal"><a href="#__codelineno-54-11">11</a></span>
+<span class="normal"><a href="#__codelineno-54-12">12</a></span>
+<span class="normal"><a href="#__codelineno-54-13">13</a></span>
+<span class="normal"><a href="#__codelineno-54-14">14</a></span>
+<span class="normal"><a href="#__codelineno-54-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1"></a>Ini
+<a id="__codelineno-54-2" name="__codelineno-54-2"></a>
+<a id="__codelineno-54-3" name="__codelineno-54-3"></a>
+<a id="__codelineno-54-4" name="__codelineno-54-4"></a>
+<a id="__codelineno-54-5" name="__codelineno-54-5"></a>
+<a id="__codelineno-54-6" name="__codelineno-54-6"></a>[Unit]
+<a id="__codelineno-54-7" name="__codelineno-54-7"></a>Description=Custom Watchdog Daemon
+<a id="__codelineno-54-8" name="__codelineno-54-8"></a>
+<a id="__codelineno-54-9" name="__codelineno-54-9"></a>[Service]
+<a id="__codelineno-54-10" name="__codelineno-54-10"></a>ExecStart=/usr/local/bin/watchdog
+<a id="__codelineno-54-11" name="__codelineno-54-11"></a>Restart=always
+<a id="__codelineno-54-12" name="__codelineno-54-12"></a>WatchdogSec=40  # 向systemd报告心跳的超时时间
+<a id="__codelineno-54-13" name="__codelineno-54-13"></a>
+<a id="__codelineno-54-14" name="__codelineno-54-14"></a>[Install]
+<a id="__codelineno-54-15" name="__codelineno-54-15"></a>WantedBy=multi-user.target
+</code></pre></div></td></tr></table></div>
 <p>启用服务：</p>
-<pre><code>Bash
-
-
-
-
-sudo systemctl daemon-reload
-sudo systemctl start my_watchdog
-</code></pre>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-55-1">1</a></span>
+<span class="normal"><a href="#__codelineno-55-2">2</a></span>
+<span class="normal"><a href="#__codelineno-55-3">3</a></span>
+<span class="normal"><a href="#__codelineno-55-4">4</a></span>
+<span class="normal"><a href="#__codelineno-55-5">5</a></span>
+<span class="normal"><a href="#__codelineno-55-6">6</a></span>
+<span class="normal"><a href="#__codelineno-55-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1"></a>Bash
+<a id="__codelineno-55-2" name="__codelineno-55-2"></a>
+<a id="__codelineno-55-3" name="__codelineno-55-3"></a>
+<a id="__codelineno-55-4" name="__codelineno-55-4"></a>
+<a id="__codelineno-55-5" name="__codelineno-55-5"></a>
+<a id="__codelineno-55-6" name="__codelineno-55-6"></a>sudo systemctl daemon-reload
+<a id="__codelineno-55-7" name="__codelineno-55-7"></a>sudo systemctl start my_watchdog
+</code></pre></div></td></tr></table></div>
 <hr />
 <h3 id="6_3"><strong>6. 故障排查</strong><a class="headerlink" href="#6_3" title="Permanent link">&para;</a></h3>
 <table>
@@ -2388,6 +3097,12 @@ sudo systemctl start my_watchdog
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
       </main>
       
         <footer class="md-footer">
@@ -2417,7 +3132,7 @@ sudo systemctl start my_watchdog
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["toc.integrate", "toc.follow", "navigation.sections"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.tabs", "navigation.sections", "content.code.copy", "content.action.edit", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>

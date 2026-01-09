@@ -1,17 +1,8 @@
-# Welcome to MkDocs
+# 文档站点
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+这是一个用 **MkDocs + Material** 搭建、可发布到 **GitHub Pages** 的文档站点。
 
-## Commands
+你要的“GitBook 同款能力”（如：**Step/步骤样式**、**提示块**、**表格配色**、**代码块增强**）已在示例页里给出：
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+- [GitBook 同款能力示例](guide/gitbook-like.md)
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.

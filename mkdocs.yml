@@ -1,25 +1,69 @@
 # 新增/修改以下配置
-site_name: EC300用户手册
+site_name: 用户手册
+site_description: Documentation powered by MkDocs (Material)
 site_url: https://jiajy.github.io/product_manaul/  # 最终访问地址
 repo_url: https://github.com/jiajy/product_manaul  # 你的GitHub仓库地址
 repo_name: jiajy/product_manaul
+edit_uri: edit/main/product_manaul/
 # 主题配置（核心）
+# mkdocs.yml 核心主题配置
 theme:
   name: material
+  # 基础风格（和GitBook一致的简洁感）
+  language: zh
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
   features:
-    - toc.integrate  # 强制右侧显示目录
-    - toc.follow     # 目录跟随滚动
-    - navigation.sections  # 左侧导航按一级标题分组
-
-# Markdown扩展（控制标题层级）
-markdown_extensions:
-  - toc:
-      toc_depth: 6  # 支持到6级标题
-      permalink: true  # 标题后显示锚点（便于调试）
-  - pymdownx.highlight:
-      anchor_linenums: true
-
-# 左侧导航（对应一/二级标题）
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+    - content.action.edit
+    - search.suggest
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: green
+      accent: green
+    - scheme: slate
+      primary: green
+      accent: green
+  # 自定义字体（和GitBook统一）
+  font:
+    text: Roboto
+    code: Roboto Mono
 nav:
   - 首页: index.md
-  - EC300手册V1.3.1: EC300/zh/EC300用户手册_V1.3.1_Udesk.md  # 二级标题（左侧导航子项）
+  - 写作示例:
+      - GitBook 同款能力: guide/gitbook-like.md
+      - 可视化编辑（WYSIWYG）: guide/visual-editor.md
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.mark
+  
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+  
