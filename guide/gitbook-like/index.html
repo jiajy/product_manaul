@@ -20,7 +20,7 @@
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -94,8 +94,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../.." title="用户手册" class="md-header__button md-logo" aria-label="用户手册" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -125,13 +124,13 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="green"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
     
   
 </form>
@@ -276,8 +275,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="用户手册" class="md-nav__button md-logo" aria-label="用户手册" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../../assets/logo.svg" alt="logo">
 
     </a>
     用户手册
@@ -539,6 +537,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visual-editor.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    可视化编辑（WYSIWYG）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -687,23 +713,21 @@
 <ol>
 <li>
 <p>准备环境：安装 Python 3.10+ / 3.11+（推荐）</p>
-</li>
-<li>
-<p>如果你用的是 Windows，建议用 <code>python -m mkdocs serve</code></p>
-</li>
-<li>
-<p>如果你要固定端口：<code>python -m mkdocs serve -a 127.0.0.1:8000</code></p>
+<ul>
+<li>如果你用的是 Windows，建议用 <code>python -m mkdocs serve</code></li>
+<li>如果你要固定端口：<code>python -m mkdocs serve -a 127.0.0.1:8000</code></li>
+</ul>
 </li>
 <li>
 <p>安装依赖：<code>pip install -r requirements.txt</code></p>
-</li>
-</ol>
 <p>你也可以创建虚拟环境（推荐）：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>.venv<span class="se">\\</span>Scripts<span class="se">\\</span>activate
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</code></pre></div>
-<ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>.venv<span class="se">\\</span>Scripts<span class="se">\\</span>activate
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div></td></tr></table></div>
+</li>
 <li>
 <p>本地预览：<code>mkdocs serve</code></p>
 </li>
@@ -712,6 +736,7 @@
 </li>
 </ol>
 </div>
+<p><strong>注意</strong>：如果你希望“同一个步骤”里有多行（段落/子列表/代码块），这些行必须相对 <code>1.</code> <strong>再缩进至少 4 个空格</strong>，否则会被解析成“新的步骤项”，看起来就像每个 step 只有一行。</p>
 <h2 id="2-gitbook-callouts">2) 提示块（GitBook Callouts）<a class="headerlink" href="#2-gitbook-callouts" title="Permanent link">&para;</a></h2>
 <p>Material 支持 GitBook 常见的提示块：</p>
 <div class="admonition note">
@@ -833,9 +858,10 @@
 </table>
 </div>
 <h2 id="4">4) 代码块增强（复制按钮/高亮/行号锚点）<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>mkdocs<span class="w"> </span>serve
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>mkdocs<span class="w"> </span>serve
+</code></pre></div></td></tr></table></div>
 <h2 id="5-gitbook-highlight">5) 文本高亮（类似 GitBook Highlight）<a class="headerlink" href="#5-gitbook-highlight" title="Permanent link">&para;</a></h2>
 <p>使用 <code>==高亮==</code>（已启用 <code>pymdownx.mark</code>）：</p>
 <p><mark>这段文字会高亮显示</mark></p>

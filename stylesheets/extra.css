@@ -1,4 +1,17 @@
 /* =========================
+   Theme overrides: 强制主色为绿色（避免缓存/调色板偏好导致看起来没变）
+   ========================= */
+:root {
+  --md-primary-fg-color: #16a34a; /* green-600 */
+  --md-accent-fg-color: #22c55e;  /* green-500 */
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #22c55e; /* 提亮一点，暗色更清晰 */
+  --md-accent-fg-color: #4ade80;  /* green-400 */
+}
+
+/* =========================
    GitBook-like "Steps"
    稳定用法（推荐）：
    <div class="steps" markdown="1">
@@ -20,7 +33,6 @@
   position: relative;
   padding: 0.15rem 0.5rem 0.15rem 2.75rem;
   margin: 0.75rem 0;
-  border-left: 3px solid color-mix(in srgb, var(--md-primary-fg-color) 30%, var(--md-default-fg-color--lightest));
 }
 
 .md-typeset .steps > ol > li::before,
@@ -39,6 +51,20 @@
   color: var(--md-primary-bg-color);
   background: var(--md-primary-fg-color);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* 连接竖线：对齐到圆点“正中”（x = 1rem）并从圆点下方延伸到下一步 */
+.md-typeset .steps > ol > li:not(:last-child)::after,
+.md-typeset ol.steps > li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 1rem;             /* 圆点宽 2rem，中心点=1rem */
+  top: calc(0.15rem + 2rem + 0.25rem); /* 圆点顶部 + 圆点高度 + 间距 */
+  bottom: -0.75rem;       /* 覆盖 li 的外边距，让线条连接更自然 */
+  width: 3px;
+  transform: translateX(-50%);
+  background: color-mix(in srgb, var(--md-primary-fg-color) 35%, var(--md-default-fg-color--lightest));
+  border-radius: 999px;
 }
 
 /* 多行/多段内容：不管 li 里是 p、ul、pre 还是 admonition，都保证上下不挤出“空隙错位” */
