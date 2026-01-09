@@ -1,0 +1,41 @@
+# Decap CMS (Netlify CMS) config
+#
+# 关键点：
+# - GitHub Pages 只能托管静态文件，登录/鉴权必须用外部 OAuth 代理（推荐 Netlify / Vercel / Cloudflare）
+# - 配置完成后，访问：/admin/
+#
+# 具体接入步骤见 docs/guide/visual-editor.md
+
+backend:
+  name: github
+  repo: jiajy/product_manaul
+  branch: main
+
+# ⚠️ 需要你提供 OAuth 代理地址（推荐做法：用 netlify identity + git-gateway，或单独部署 oauth provider）
+# base_url: https://<YOUR_OAUTH_PROVIDER_HOST>
+# auth_endpoint: /auth
+
+media_folder: "docs/assets/uploads"
+public_folder: "/assets/uploads"
+
+publish_mode: simple
+
+collections:
+  - name: "docs"
+    label: "文档页面"
+    label_singular: "页面"
+    folder: "docs"
+    create: false
+    nested:
+      depth: 5
+    extension: "md"
+    format: "frontmatter"
+    filter:
+      field: "path"
+      value: "admin"
+      # 说明：Decap 本身不支持“排除文件夹”的强规则，这里只是占位提醒；
+      # 你可以把可编辑内容统一放到 docs/pages/ 再把 folder 指向那里。
+    fields:
+      - { label: "标题", name: "title", widget: "string", required: false }
+      - { label: "正文", name: "body", widget: "markdown" }
+
