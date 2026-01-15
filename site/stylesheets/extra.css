@@ -12,6 +12,105 @@
 }
 
 /* =========================
+   Text color: 字体颜色（可直接在 Markdown 里用 span class）
+   用法：<span class="text-red">红色</span>
+   ========================= */
+.md-typeset .text-primary, .text-primary { color: var(--md-primary-fg-color); }
+.md-typeset .text-accent, .text-accent { color: var(--md-accent-fg-color); }
+.md-typeset .text-muted, .text-muted { color: var(--md-default-fg-color--light); }
+
+.md-typeset .text-green, .text-green { color: #16a34a; }
+.md-typeset .text-red, .text-red { color: #dc2626; }
+.md-typeset .text-orange, .text-orange { color: #f59e0b; }
+.md-typeset .text-blue, .text-blue { color: #2563eb; }
+.md-typeset .text-purple, .text-purple { color: #7c3aed; }
+
+[data-md-color-scheme="slate"] .md-typeset .text-green,
+[data-md-color-scheme="slate"] .text-green { color: #4ade80; }
+[data-md-color-scheme="slate"] .md-typeset .text-red,
+[data-md-color-scheme="slate"] .text-red { color: #f87171; }
+[data-md-color-scheme="slate"] .md-typeset .text-orange,
+[data-md-color-scheme="slate"] .text-orange { color: #fbbf24; }
+[data-md-color-scheme="slate"] .md-typeset .text-blue,
+[data-md-color-scheme="slate"] .text-blue { color: #60a5fa; }
+[data-md-color-scheme="slate"] .md-typeset .text-purple,
+[data-md-color-scheme="slate"] .text-purple { color: #a78bfa; }
+
+/* =========================
+   PDF/Print: 打印为 PDF 的样式与按钮
+   ========================= */
+/* 顶栏右上角的“下载 PDF”按钮（小图标） */
+.md-header .pdf-download-header svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+/* 与其它顶栏按钮保持一致的 hover/active 区域 */
+.md-header .pdf-download-header {
+  margin-left: 0.1rem;
+}
+
+@media print {
+  /* 隐藏导航/侧边栏/页脚，只保留正文 */
+  .md-header,
+  .md-sidebar,
+  .md-footer,
+  .md-top,
+  .md-content__button,
+  .md-search,
+  .md-tabs {
+    display: none !important;
+  }
+
+  /* 正文撑满宽度 */
+  .md-grid,
+  .md-content {
+    max-width: 100% !important;
+  }
+
+  /* 去掉按钮 */
+  .pdf-download-header {
+    display: none !important;
+  }
+
+  /* 打印时更清晰的颜色 */
+  :root {
+    --md-default-bg-color: #ffffff;
+  }
+}
+
+/* =========================
+   Layout: 增大阅读区域、缩窄两侧栏（仅大屏）
+   ========================= */
+@media (min-width: 76.25em) {
+  /* 主体三栏布局：导航 / 正文 / 目录 */
+  .md-main__inner.md-grid {
+    grid-template-columns: 14rem minmax(0, 1fr) 14rem;
+  }
+
+  /* 让正文容器更宽 */
+  .md-main__inner.md-grid,
+  .md-header__inner.md-grid,
+  .md-footer-meta__inner.md-grid {
+    max-width: 92rem;
+  }
+}
+
+/* =========================
+   Sidebar: 更像“文件树”的左侧目录
+   ========================= */
+/* 左侧导航条目更紧凑一点 */
+.md-nav__link {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+/* 当前页高亮更明显 */
+.md-nav__link--active {
+  font-weight: 700;
+}
+
+/* =========================
    GitBook-like "Steps"
    稳定用法（推荐）：
    <div class="steps" markdown="1">

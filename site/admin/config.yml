@@ -1,0 +1,42 @@
+# Decap CMS (Netlify CMS) config
+#
+# 关键点：
+# - GitHub Pages 只能托管静态文件，登录/鉴权必须用外部 OAuth 代理（推荐 Netlify / Vercel / Cloudflare）
+# - 配置完成后，访问：/admin/
+#
+# 具体接入步骤见 docs/zh/guide/visual-editor.md
+
+backend:
+  # 方案 A（推荐）：Netlify Identity + Git Gateway
+  # 需要在 Netlify 后台开启 Identity 与 Git Gateway
+  name: git-gateway
+  branch: main
+
+# 上传的资源会写入仓库路径（必须存在/可创建），并在站点中以 /assets/uploads 访问
+media_folder: "docs/zh/assets/uploads"
+public_folder: "/assets/uploads"
+
+publish_mode: simple
+
+# 开启预览，并让预览尽量贴近站点实际样式
+editor:
+  preview: true
+
+# 预览面板加载站点 CSS（在 Netlify 同源站点下可用）
+preview_styles:
+  - /stylesheets/extra.css
+
+collections:
+  - name: "pages"
+    label: "文档页面"
+    label_singular: "页面"
+    # ✅ 推荐：把可视化编辑内容集中在 docs/pages/，避免误改配置/管理文件
+    folder: "docs/zh/pages"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "标题", name: "title", widget: "string", required: false }
+      - { label: "正文", name: "body", widget: "markdown" }
+
