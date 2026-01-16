@@ -1,11 +1,11 @@
 site_name: Docs
 site_description: Documentation powered by MkDocs (Material)
-# site_url: https://<YOUR_GITHUB_ORG>.github.io/<YOUR_REPO>/
+site_url: https://jiajy.github.io/product_manaul/
 # 本地预览保持为空，避免资源被错误前缀；发布时改成你的 GitHub Pages 地址
-site_url: ""
+# site_url: ""
 
-repo_url: https://github.com/<YOUR_GITHUB_ORG>/<YOUR_REPO>
-repo_name: <YOUR_GITHUB_ORG>/<YOUR_REPO>
+repo_url: https://github.com/jiajy/product_manaul
+repo_name: jiajy/product_manaul
 edit_uri: edit/main/docs/zh/
 
 # 方案 B：中文/英文各自独立 docs_dir，构建两次输出到 / 与 /en
