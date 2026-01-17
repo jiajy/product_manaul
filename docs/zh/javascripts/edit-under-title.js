@@ -20,11 +20,15 @@
   }
 
   function inject() {
-    var main = document.querySelector(".md-content__inner");
+    var main =
+      document.querySelector('[data-md-component="content"] .md-content__inner') ||
+      document.querySelector(".md-content__inner");
     if (!main) return;
-    if (main.querySelector(".pm-edit-under-title")) return;
+    // Remove previous injection (instant navigation / re-render)
+    var old = main.querySelector(".pm-edit-under-title");
+    if (old && old.parentNode) old.parentNode.removeChild(old);
 
-    var h1 = main.querySelector("h1");
+    var h1 = main.querySelector(".md-typeset h1") || main.querySelector("h1");
     if (!h1) return;
 
     var url = findEditUrl();
@@ -49,5 +53,8 @@
       requestAnimationFrame(inject);
     });
   }
+
+  // Best-effort immediate run (in case DOMContentLoaded already fired)
+  inject();
 })();
 
