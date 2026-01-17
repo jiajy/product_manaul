@@ -67,6 +67,7 @@ extra_javascript:
   - javascripts/pdf.js
   - javascripts/embed-bridge.js
   - javascripts/sidebar-search.js
+  - javascripts/edit-under-title.js
 
 plugins:
   - search
