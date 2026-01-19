@@ -20,6 +20,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Needed to diff against previous commit on push
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -30,6 +33,118 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      # Notify internal API when new markdown docs are added to main.
+      # Required GitHub Secrets:
+      # - DOCS_NOTIFY_URL
+      # Optional:
+      # - DOCS_NOTIFY_TOKEN (e.g. Bearer token)
+      - name: Notify (new docs added)
+        if: ${{ github.event_name == 'push' }}
+        continue-on-error: true
+        env:
+          DOCS_NOTIFY_URL: ${{ secrets.DOCS_NOTIFY_URL }}
+          DOCS_NOTIFY_TOKEN: ${{ secrets.DOCS_NOTIFY_TOKEN }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${DOCS_NOTIFY_URL:-}" ]; then
+            echo "DOCS_NOTIFY_URL not set; skipping notify."
+            exit 0
+          fi
+
+          # Collect added markdown files (A) under docs/
+          git diff --name-status "$BEFORE_SHA" "$AFTER_SHA" > /tmp/changed.txt || true
+
+          python - <<'PY'
+          import json, os, re, subprocess, sys
+
+          before = os.environ.get("BEFORE_SHA", "")
+          after = os.environ.get("AFTER_SHA", "")
+
+          def run(cmd):
+            return subprocess.check_output(cmd, text=True).strip()
+
+          def read_file_at(ref, path):
+            try:
+              return subprocess.check_output(["git", "show", f"{ref}:{path}"], text=True, stderr=subprocess.DEVNULL)
+            except subprocess.CalledProcessError:
+              return ""
+
+          changed = open("/tmp/changed.txt", "r", encoding="utf-8").read().splitlines()
+          added_paths = []
+          for line in changed:
+            # e.g. "A\tdocs/zh/EnRouter/IR302/quickstart.md"
+            parts = line.split("\t", 1)
+            if len(parts) != 2:
+              continue
+            status, path = parts[0].strip(), parts[1].strip()
+            if status != "A":
+              continue
+            if not path.startswith("docs/"):
+              continue
+            if not path.lower().endswith(".md"):
+              continue
+            added_paths.append(path)
+
+          def parse_title(md_text: str) -> str:
+            # Try YAML frontmatter "title:" first
+            m = re.match(r"(?s)^---\n(.*?)\n---\n", md_text)
+            if m:
+              fm = m.group(1)
+              for line in fm.splitlines():
+                if line.strip().lower().startswith("title:"):
+                  return line.split(":", 1)[1].strip().strip('"').strip("'")
+            # Fallback to first markdown H1 heading
+            for line in md_text.splitlines():
+              s = line.strip()
+              if s.startswith("# "):
+                return s[2:].strip()
+            return ""
+
+          items = []
+          for path in added_paths:
+            md = read_file_at(after, path)
+            folder = "/".join(path.split("/")[:-1]).replace("docs/", "", 1)  # e.g. "zh/EnRouter/IR302"
+            doc = os.path.splitext(os.path.basename(path))[0]               # e.g. "quickstart"
+            title = parse_title(md)
+            items.append({"path": path, "folder": folder, "doc": doc, "title": title})
+
+          payload = {
+            "repo": os.environ.get("GITHUB_REPOSITORY", ""),
+            "ref": os.environ.get("GITHUB_REF_NAME", ""),
+            "before": before,
+            "after": after,
+            "added": items,
+          }
+
+          out = "/tmp/docs-added.json"
+          with open(out, "w", encoding="utf-8") as f:
+            json.dump(payload, f, ensure_ascii=False)
+
+          print(f"Added docs: {len(items)}")
+          PY
+
+          # Skip if no docs added
+          if python -c "import json; import sys; d=json.load(open('/tmp/docs-added.json','r',encoding='utf-8')); sys.exit(0 if d.get('added') else 1)"; then
+            :
+          else
+            echo "No new docs added; skipping notify."
+            exit 0
+          fi
+
+          AUTH_HEADER=()
+          if [ -n "${DOCS_NOTIFY_TOKEN:-}" ]; then
+            AUTH_HEADER=(-H "Authorization: Bearer ${DOCS_NOTIFY_TOKEN}")
+          fi
+
+          # Never fail the pipeline due to notify issues.
+          curl -sS -X POST "${DOCS_NOTIFY_URL}" \
+            -H "Content-Type: application/json" \
+            "${AUTH_HEADER[@]}" \
+            --data-binary "@/tmp/docs-added.json" || echo "Notify request failed; continuing."
 
       # Build Chinese site to /
       - name: Build (zh)
@@ -85,10 +200,15 @@ jobs:
           name: site-zh
           path: site-zh
 
-      - name: Setup SSH agent
-        uses: webfactory/ssh-agent@v0.9.0
-        with:
-          ssh-private-key: ${{ secrets.ECS_SSH_KEY }}
+      # Using password auth (less secure than SSH keys).
+      # Required GitHub Secrets:
+      # - ECS_HOST, ECS_USER, ECS_PASSWORD
+      # Optional:
+      # - ECS_SSH_PORT (default 22)
+      - name: Install sshpass (for password SSH)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sshpass
 
       - name: Add ECS host key
         env:
@@ -102,6 +222,7 @@ jobs:
         env:
           ECS_HOST: ${{ secrets.ECS_HOST }}
           ECS_USER: ${{ secrets.ECS_USER }}
+          ECS_PASSWORD: ${{ secrets.ECS_PASSWORD }}
           ECS_SSH_PORT: ${{ secrets.ECS_SSH_PORT }}
         run: |
           set -euo pipefail
@@ -110,12 +231,15 @@ jobs:
           NEW_DIR="${DOCS_DIR}.__new__"
           OLD_DIR="${DOCS_DIR}.__old__"
 
-          ssh -p "$PORT" "${ECS_USER}@${ECS_HOST}" "rm -rf \"$NEW_DIR\" && mkdir -p \"$NEW_DIR\""
+          SSH="sshpass -p \"$ECS_PASSWORD\" ssh -p \"$PORT\""
+          RSYNC_SSH="sshpass -p \"$ECS_PASSWORD\" ssh -p $PORT"
 
-          rsync -az --delete -e "ssh -p $PORT" "site-zh/" "${ECS_USER}@${ECS_HOST}:$NEW_DIR/"
+          $SSH "${ECS_USER}@${ECS_HOST}" "rm -rf \"$NEW_DIR\" && mkdir -p \"$NEW_DIR\""
 
-          ssh -p "$PORT" "${ECS_USER}@${ECS_HOST}" "test -f \"$NEW_DIR/index.html\""
-          ssh -p "$PORT" "${ECS_USER}@${ECS_HOST}" "rm -rf \"$OLD_DIR\"; if [ -d \"$DOCS_DIR\" ]; then mv \"$DOCS_DIR\" \"$OLD_DIR\"; fi; mv \"$NEW_DIR\" \"$DOCS_DIR\""
+          rsync -az --delete -e "$RSYNC_SSH" "site-zh/" "${ECS_USER}@${ECS_HOST}:$NEW_DIR/"
+
+          $SSH "${ECS_USER}@${ECS_HOST}" "test -f \"$NEW_DIR/index.html\""
+          $SSH "${ECS_USER}@${ECS_HOST}" "rm -rf \"$OLD_DIR\"; if [ -d \"$DOCS_DIR\" ]; then mv \"$DOCS_DIR\" \"$OLD_DIR\"; fi; mv \"$NEW_DIR\" \"$DOCS_DIR\""
 
   deploy_s3_zh:
     name: Deploy zh docs to AWS S3
