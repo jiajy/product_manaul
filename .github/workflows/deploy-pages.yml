@@ -135,6 +135,7 @@ jobs:
       # - AWS_SECRET_ACCESS_KEY
       # - AWS_REGION
       # - AWS_S3_BUCKET
+      # - CLOUDFRONT_DISTRIBUTION_ID
       # Optional:
       # - AWS_S3_PREFIX (default: resources-center/docs/)
       - name: Configure AWS credentials
@@ -152,3 +153,16 @@ jobs:
           set -euo pipefail
           DEST_PREFIX="${AWS_S3_PREFIX:-resources-center/docs/}"
           aws s3 sync "site-zh/" "s3://${AWS_S3_BUCKET}/${DEST_PREFIX}" --delete
+
+      - name: Invalidate CloudFront cache
+        env:
+          CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+          AWS_S3_PREFIX: ${{ secrets.AWS_S3_PREFIX }}
+        run: |
+          set -euo pipefail
+          DEST_PREFIX="${AWS_S3_PREFIX:-resources-center/docs/}"
+          # Ensure prefix ends with a single slash for CloudFront paths.
+          DEST_PREFIX="${DEST_PREFIX%/}/"
+          aws cloudfront create-invalidation \
+            --distribution-id "$CLOUDFRONT_DISTRIBUTION_ID" \
+            --paths "/${DEST_PREFIX}*"
