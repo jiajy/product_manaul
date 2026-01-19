@@ -218,7 +218,13 @@ jobs:
           ECS_SSH_PORT: ${{ secrets.ECS_SSH_PORT }}
         run: |
           mkdir -p ~/.ssh
-          ssh-keyscan -p "${ECS_SSH_PORT:-22}" "${ECS_HOST}" >> ~/.ssh/known_hosts || true
+          PORT_RAW="${ECS_SSH_PORT:-22}"
+          PORT="$(printf '%s' "$PORT_RAW" | tr -d '"'\'' ' )"
+          if ! [[ "$PORT" =~ ^[0-9]+$ ]]; then
+            echo "Invalid ECS_SSH_PORT='$PORT_RAW' -> using 22"
+            PORT="22"
+          fi
+          ssh-keyscan -p "$PORT" "${ECS_HOST}" >> ~/.ssh/known_hosts || true
 
       - name: Sync to ECS (atomic directory swap)
         env:
@@ -228,12 +234,17 @@ jobs:
           ECS_SSH_PORT: ${{ secrets.ECS_SSH_PORT }}
         run: |
           set -euo pipefail
-          PORT="${ECS_SSH_PORT:-22}"
+          PORT_RAW="${ECS_SSH_PORT:-22}"
+          PORT="$(printf '%s' "$PORT_RAW" | tr -d '"'\'' ' )"
+          if ! [[ "$PORT" =~ ^[0-9]+$ ]]; then
+            echo "Invalid ECS_SSH_PORT='$PORT_RAW' -> using 22"
+            PORT="22"
+          fi
           DOCS_DIR="/var/www/html/static/resources-center-docs"
           NEW_DIR="${DOCS_DIR}.__new__"
           OLD_DIR="${DOCS_DIR}.__old__"
 
-          SSH="sshpass -p \"$ECS_PASSWORD\" ssh -p \"$PORT\" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+          SSH="sshpass -p \"$ECS_PASSWORD\" ssh -p $PORT -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
           RSYNC_SSH="sshpass -p \"$ECS_PASSWORD\" ssh -p $PORT -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
 
           $SSH "${ECS_USER}@${ECS_HOST}" "rm -rf \"$NEW_DIR\" && mkdir -p \"$NEW_DIR\""
