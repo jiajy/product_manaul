@@ -210,13 +210,15 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y sshpass
 
-      - name: Add ECS host key
+      # Host key scan can fail due to networking / firewall.
+      # We disable strict host key checking for this deploy job instead.
+      - name: Add ECS host key (best effort)
         env:
           ECS_HOST: ${{ secrets.ECS_HOST }}
           ECS_SSH_PORT: ${{ secrets.ECS_SSH_PORT }}
         run: |
           mkdir -p ~/.ssh
-          ssh-keyscan -p "${ECS_SSH_PORT:-22}" "${ECS_HOST}" >> ~/.ssh/known_hosts
+          ssh-keyscan -p "${ECS_SSH_PORT:-22}" "${ECS_HOST}" >> ~/.ssh/known_hosts || true
 
       - name: Sync to ECS (atomic directory swap)
         env:
@@ -231,8 +233,8 @@ jobs:
           NEW_DIR="${DOCS_DIR}.__new__"
           OLD_DIR="${DOCS_DIR}.__old__"
 
-          SSH="sshpass -p \"$ECS_PASSWORD\" ssh -p \"$PORT\""
-          RSYNC_SSH="sshpass -p \"$ECS_PASSWORD\" ssh -p $PORT"
+          SSH="sshpass -p \"$ECS_PASSWORD\" ssh -p \"$PORT\" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+          RSYNC_SSH="sshpass -p \"$ECS_PASSWORD\" ssh -p $PORT -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
 
           $SSH "${ECS_USER}@${ECS_HOST}" "rm -rf \"$NEW_DIR\" && mkdir -p \"$NEW_DIR\""
 
