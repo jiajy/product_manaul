@@ -41,6 +41,13 @@ jobs:
         run: |
           python -m mkdocs build -f mkdocs.en.yml -d site/en
 
+      # Prepare Chinese-only artifact for deployments (exclude /en)
+      - name: Prepare artifact (zh only)
+        run: |
+          rm -rf site-zh
+          mkdir -p site-zh
+          rsync -a --delete --exclude 'en/' site/ site-zh/
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -48,6 +55,12 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
+
+      - name: Upload artifact (zh only)
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-zh
+          path: site-zh
 
   deploy:
     needs: build
@@ -59,3 +72,83 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  deploy_ecs_zh:
+    name: Deploy zh docs to ECS (SSH)
+    needs: build
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Download artifact (zh only)
+        uses: actions/download-artifact@v4
+        with:
+          name: site-zh
+          path: site-zh
+
+      - name: Setup SSH agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.ECS_SSH_KEY }}
+
+      - name: Add ECS host key
+        env:
+          ECS_HOST: ${{ secrets.ECS_HOST }}
+          ECS_SSH_PORT: ${{ secrets.ECS_SSH_PORT }}
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -p "${ECS_SSH_PORT:-22}" "${ECS_HOST}" >> ~/.ssh/known_hosts
+
+      - name: Sync to ECS (atomic directory swap)
+        env:
+          ECS_HOST: ${{ secrets.ECS_HOST }}
+          ECS_USER: ${{ secrets.ECS_USER }}
+          ECS_SSH_PORT: ${{ secrets.ECS_SSH_PORT }}
+        run: |
+          set -euo pipefail
+          PORT="${ECS_SSH_PORT:-22}"
+          DOCS_DIR="/var/www/html/static/resources-center-docs"
+          NEW_DIR="${DOCS_DIR}.__new__"
+          OLD_DIR="${DOCS_DIR}.__old__"
+
+          ssh -p "$PORT" "${ECS_USER}@${ECS_HOST}" "rm -rf \"$NEW_DIR\" && mkdir -p \"$NEW_DIR\""
+
+          rsync -az --delete -e "ssh -p $PORT" "site-zh/" "${ECS_USER}@${ECS_HOST}:$NEW_DIR/"
+
+          ssh -p "$PORT" "${ECS_USER}@${ECS_HOST}" "test -f \"$NEW_DIR/index.html\""
+          ssh -p "$PORT" "${ECS_USER}@${ECS_HOST}" "rm -rf \"$OLD_DIR\"; if [ -d \"$DOCS_DIR\" ]; then mv \"$DOCS_DIR\" \"$OLD_DIR\"; fi; mv \"$NEW_DIR\" \"$DOCS_DIR\""
+
+  deploy_s3_zh:
+    name: Deploy zh docs to AWS S3
+    needs: deploy_ecs_zh
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - name: Download artifact (zh only)
+        uses: actions/download-artifact@v4
+        with:
+          name: site-zh
+          path: site-zh
+
+      # Required GitHub Secrets:
+      # - AWS_ACCESS_KEY_ID
+      # - AWS_SECRET_ACCESS_KEY
+      # - AWS_REGION
+      # - AWS_S3_BUCKET
+      # Optional:
+      # - AWS_S3_PREFIX (default: resources-center/docs/)
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Sync to S3 (mirror)
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_S3_PREFIX: ${{ secrets.AWS_S3_PREFIX }}
+        run: |
+          set -euo pipefail
+          DEST_PREFIX="${AWS_S3_PREFIX:-resources-center/docs/}"
+          aws s3 sync "site-zh/" "s3://${AWS_S3_BUCKET}/${DEST_PREFIX}" --delete

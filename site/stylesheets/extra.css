@@ -285,6 +285,17 @@ input.md-nav__toggle + label.md-nav__link svg {
   text-decoration: underline;
 }
 
+.pm-edit-under-title__sep {
+  display: inline-block;
+  margin: 0 0.35rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.pm-edit-under-title__link--muted {
+  color: var(--md-default-fg-color--light);
+  font-weight: 600;
+}
+
 /* =========================
    GitBook-like "Steps"
    稳定用法（推荐）：

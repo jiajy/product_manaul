@@ -1,9 +1,12 @@
 // Show a per-page "Edit this page" link under the main H1.
 // We reuse the existing Material edit button URL so it always points to the exact source file.
 (function () {
-  function getLabel() {
+  function getLabels() {
     var lang = (document.documentElement.getAttribute("lang") || "").toLowerCase();
-    return lang.startsWith("zh") ? "编辑此页" : "Edit this page";
+    if (lang.startsWith("zh")) {
+      return { view: "查看源码" };
+    }
+    return { view: "View source" };
   }
 
   function findEditUrl() {
@@ -17,6 +20,22 @@
       if (href.indexOf("/edit/") !== -1 || href.indexOf("/blob/") !== -1) return href;
     }
     return candidates[0].getAttribute("href") || "";
+  }
+
+  function toBlobUrl(url) {
+    // https://github.com/<org>/<repo>/edit/<branch>/<path>
+    // -> https://github.com/<org>/<repo>/blob/<branch>/<path>
+    if (!url) return "";
+    if (url.indexOf("/edit/") !== -1) return url.replace("/edit/", "/blob/");
+    return url;
+  }
+
+  function toGiteeUrl(url) {
+    // GitHub -> Gitee mirror (same owner/repo/path)
+    if (!url) return "";
+    return url
+      .replace(/^https?:\/\/github\.com\//i, "https://gitee.com/")
+      .replace(/^https?:\/\/www\.github\.com\//i, "https://gitee.com/");
   }
 
   function inject() {
@@ -33,14 +52,16 @@
 
     var url = findEditUrl();
     if (!url) return;
+    var blobUrl = toGiteeUrl(toBlobUrl(url));
+    var labels = getLabels();
 
     var wrap = document.createElement("div");
     wrap.className = "pm-edit-under-title";
     wrap.innerHTML =
       '<a class="pm-edit-under-title__link" href="' +
-      url +
+      blobUrl +
       '" target="_blank" rel="noopener noreferrer">' +
-      getLabel() +
+      labels.view +
       "</a>";
     h1.insertAdjacentElement("afterend", wrap);
   }
