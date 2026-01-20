@@ -66,7 +66,10 @@ jobs:
             # Fall back to empty tree if base commit isn't available.
             BASE_SHA="${EMPTY_TREE}"
           fi
-          git diff --name-status "$BASE_SHA" "$AFTER_SHA" > /tmp/changed.txt || true
+          # Try to detect adds/renames/copies robustly.
+          git diff --name-status -M -C "$BASE_SHA" "$AFTER_SHA" > /tmp/changed.txt || true
+          echo "=== docs notify diff (name-status) ==="
+          sed -n '1,200p' /tmp/changed.txt || true
 
           python - <<'PY'
           import json, os, re, subprocess, sys
@@ -146,7 +149,9 @@ jobs:
           with open(out, "w", encoding="utf-8") as f:
             json.dump(payload, f, ensure_ascii=False)
 
-          print(f"Added docs: {len(items)}")
+          print(f"Added docs detected: {len(items)}")
+          for it in items[:20]:
+            print(" -", it.get("path"))
           PY
 
           # Skip if no docs added
@@ -163,10 +168,21 @@ jobs:
           fi
 
           # Never fail the pipeline due to notify issues.
-          curl -sS -X POST "${DOCS_NOTIFY_URL}" \
+          set +e
+          RESP="$(curl -sS -w $'\n%{http_code}' -X POST "${DOCS_NOTIFY_URL}" \
             -H "Content-Type: application/json" \
             "${AUTH_HEADER[@]}" \
-            --data-binary "@/tmp/docs-added.json" || echo "Notify request failed; continuing."
+            --data-binary "@/tmp/docs-added.json")"
+          CURL_EC=$?
+          set -e
+          if [ "$CURL_EC" -ne 0 ]; then
+            echo "Notify request failed (curl exit $CURL_EC); continuing."
+            exit 0
+          fi
+          CODE="$(printf '%s' "$RESP" | tail -n 1)"
+          BODY="$(printf '%s' "$RESP" | sed '$d')"
+          echo "Notify HTTP status: $CODE"
+          printf '%s' "$BODY" | head -c 800 || true
 
       # Build Chinese site to /
       - name: Build (zh)
@@ -266,8 +282,8 @@ jobs:
           NEW_DIR="${DOCS_DIR}.__new__"
           OLD_DIR="${DOCS_DIR}.__old__"
 
-          SSH="sshpass -p \"$ECS_PASSWORD\" ssh -p $PORT -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
-          RSYNC_SSH="sshpass -p \"$ECS_PASSWORD\" ssh -p $PORT -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+          SSH="sshpass -p \"$ECS_PASSWORD\" ssh -p $PORT -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o PreferredAuthentications=password -o PubkeyAuthentication=no -o NumberOfPasswordPrompts=1"
+          RSYNC_SSH="sshpass -p \"$ECS_PASSWORD\" ssh -p $PORT -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o PreferredAuthentications=password -o PubkeyAuthentication=no -o NumberOfPasswordPrompts=1"
 
           $SSH "${ECS_USER}@${ECS_HOST}" "rm -rf \"$NEW_DIR\" && mkdir -p \"$NEW_DIR\""
 
