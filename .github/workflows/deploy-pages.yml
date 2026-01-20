@@ -55,8 +55,18 @@ jobs:
             exit 0
           fi
 
-          # Collect added markdown files (A) under docs/
-          git diff --name-status "$BEFORE_SHA" "$AFTER_SHA" > /tmp/changed.txt || true
+          # Collect added markdown files under docs/
+          # NOTE: github.event.before can be all-zero on first push / force-push.
+          EMPTY_TREE="4b825dc642cb6eb9a060e54bf8d69288fbee4904"
+          BASE_SHA="${BEFORE_SHA}"
+          if [ -z "${BASE_SHA}" ] || [ "${BASE_SHA}" = "0000000000000000000000000000000000000000" ]; then
+            BASE_SHA="${EMPTY_TREE}"
+          fi
+          if ! git cat-file -e "${BASE_SHA}^{commit}" 2>/dev/null && [ "${BASE_SHA}" != "${EMPTY_TREE}" ]; then
+            # Fall back to empty tree if base commit isn't available.
+            BASE_SHA="${EMPTY_TREE}"
+          fi
+          git diff --name-status "$BASE_SHA" "$AFTER_SHA" > /tmp/changed.txt || true
 
           python - <<'PY'
           import json, os, re, subprocess, sys
@@ -76,12 +86,24 @@ jobs:
           changed = open("/tmp/changed.txt", "r", encoding="utf-8").read().splitlines()
           added_paths = []
           for line in changed:
-            # e.g. "A\tdocs/zh/EnRouter/IR302/quickstart.md"
-            parts = line.split("\t", 1)
-            if len(parts) != 2:
+            # Formats:
+            # - A\tpath
+            # - R100\told\tnew
+            # - C100\told\tnew
+            parts = line.split("\t")
+            if len(parts) < 2:
               continue
-            status, path = parts[0].strip(), parts[1].strip()
-            if status != "A":
+            status = parts[0].strip()
+            status_letter = status[:1]
+
+            path = None
+            if status_letter == "A" and len(parts) >= 2:
+              path = parts[1].strip()
+            elif status_letter in ("R", "C") and len(parts) >= 3:
+              # Treat rename/copy destination as "new"
+              path = parts[2].strip()
+
+            if not path:
               continue
             if not path.startswith("docs/"):
               continue
