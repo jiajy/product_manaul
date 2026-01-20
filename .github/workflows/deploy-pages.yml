@@ -270,6 +270,7 @@ jobs:
           ECS_USER: ${{ secrets.ECS_USER }}
           ECS_PASSWORD: ${{ secrets.ECS_PASSWORD }}
           ECS_SSH_PORT: ${{ secrets.ECS_SSH_PORT }}
+          ECS_DOCS_DIR: ${{ secrets.ECS_DOCS_DIR }}
         run: |
           set -euo pipefail
           PORT_RAW="${ECS_SSH_PORT:-22}"
@@ -278,7 +279,11 @@ jobs:
             echo "Invalid ECS_SSH_PORT='$PORT_RAW' -> using 22"
             PORT="22"
           fi
-          DOCS_DIR="/var/www/html/static/resources-center-docs"
+          if [ -z "${ECS_DOCS_DIR:-}" ]; then
+            echo "ECS_DOCS_DIR is not set. Please set GitHub Secret ECS_DOCS_DIR to an existing writable directory on the server."
+            exit 1
+          fi
+          DOCS_DIR="${ECS_DOCS_DIR%/}"
           NEW_DIR="${DOCS_DIR}.__new__"
           OLD_DIR="${DOCS_DIR}.__old__"
 
@@ -287,6 +292,7 @@ jobs:
           SSH="sshpass -e ssh -p $PORT -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o PreferredAuthentications=password -o PubkeyAuthentication=no -o NumberOfPasswordPrompts=1"
           RSYNC_SSH="sshpass -e ssh -p $PORT -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o PreferredAuthentications=password -o PubkeyAuthentication=no -o NumberOfPasswordPrompts=1"
 
+          # Only operate within DOCS_DIR's parent; DOCS_DIR itself should be writable by ECS_USER.
           $SSH "${ECS_USER}@${ECS_HOST}" "rm -rf \"$NEW_DIR\" && mkdir -p \"$NEW_DIR\""
 
           rsync -az --delete -e "$RSYNC_SSH" "site-zh/" "${ECS_USER}@${ECS_HOST}:$NEW_DIR/"
