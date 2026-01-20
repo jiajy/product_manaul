@@ -282,8 +282,10 @@ jobs:
           NEW_DIR="${DOCS_DIR}.__new__"
           OLD_DIR="${DOCS_DIR}.__old__"
 
-          SSH="sshpass -p \"$ECS_PASSWORD\" ssh -p $PORT -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o PreferredAuthentications=password -o PubkeyAuthentication=no -o NumberOfPasswordPrompts=1"
-          RSYNC_SSH="sshpass -p \"$ECS_PASSWORD\" ssh -p $PORT -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o PreferredAuthentications=password -o PubkeyAuthentication=no -o NumberOfPasswordPrompts=1"
+          # Use SSHPASS env var to safely handle special characters in password.
+          export SSHPASS="$ECS_PASSWORD"
+          SSH="sshpass -e ssh -p $PORT -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o PreferredAuthentications=password -o PubkeyAuthentication=no -o NumberOfPasswordPrompts=1"
+          RSYNC_SSH="sshpass -e ssh -p $PORT -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o PreferredAuthentications=password -o PubkeyAuthentication=no -o NumberOfPasswordPrompts=1"
 
           $SSH "${ECS_USER}@${ECS_HOST}" "rm -rf \"$NEW_DIR\" && mkdir -p \"$NEW_DIR\""
 
