@@ -33,6 +33,7 @@ theme:
     - content.action.edit
     - search.suggest
     - search.highlight
+    - toc.follow
   palette:
     - scheme: default
       primary: green
@@ -48,6 +49,8 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
+      toc_depth: 4
+      title: Table of Contents
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.inlinehilite
@@ -71,6 +74,7 @@ extra_javascript:
   - javascripts/embed-bridge.js
   - javascripts/sidebar-search.js
   - javascripts/edit-under-title.js
+  - javascripts/toc-h1.js
 
 plugins:
   - search

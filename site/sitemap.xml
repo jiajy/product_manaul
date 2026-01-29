@@ -2,46 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jiajy.github.io/product_manaul/index.html</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-01-23</lastmod>
+    </url>
+    <url>
+         <loc>https://jiajy.github.io/product_manaul/EnRouter/EC312/EC312_User_Manual.html</loc>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://jiajy.github.io/product_manaul/EnRouter/IR302/IR302%E5%BF%AB%E9%80%9F%E6%89%8B%E5%86%8C.html</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-01-23</lastmod>
+    </url>
+    <url>
+         <loc>https://jiajy.github.io/product_manaul/EnRouter/IR302/IR302%E5%BF%AB%E9%80%9F%E6%89%8B%E5%86%8C2.html</loc>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://jiajy.github.io/product_manaul/EnRouter/IR302/faq.html</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-01-23</lastmod>
+    </url>
+    <url>
+         <loc>https://jiajy.github.io/product_manaul/EnRouter/IR302/faq2.html</loc>
+         <lastmod>2026-01-23</lastmod>
+    </url>
+    <url>
+         <loc>https://jiajy.github.io/product_manaul/EnRouter/IR302/faq3.html</loc>
+         <lastmod>2026-01-23</lastmod>
+    </url>
+    <url>
+         <loc>https://jiajy.github.io/product_manaul/EnRouter/IR302/faq4.html</loc>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://jiajy.github.io/product_manaul/EnRouter/IR302/quickstart.html</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://jiajy.github.io/product_manaul/EnRouter/InRouter/IR302/faq.html</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://jiajy.github.io/product_manaul/EnRouter/InRouter/IR302/quickstart.html</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://jiajy.github.io/product_manaul/guide/gitbook-like.html</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://jiajy.github.io/product_manaul/guide/tables-and-pdf.html</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://jiajy.github.io/product_manaul/guide/visual-editor.html</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://jiajy.github.io/product_manaul/pages/index.html</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://jiajy.github.io/product_manaul/switch/visual-editor222.html</loc>
-         <lastmod>2026-01-19</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
 </urlset>
